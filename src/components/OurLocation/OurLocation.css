@@ -1,0 +1,23 @@
+.location-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .location-container h2 {
+    margin-bottom: 20px;
+  }
+  
+  .location-container p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+  }
+  
+  .map-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  

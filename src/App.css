@@ -1,0 +1,51 @@
+h1 {
+  color: #111a4e !important;
+  font-size: 5vw;
+  /* Responsive font size based on viewport width */
+  margin: 0;
+}
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 15vw;
+  max-width: 200px;
+  margin-right: 2vw;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 25vw;
+    margin-right: 4vw;
+  }
+
+  h1 {
+    font-size: 7vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    width: 35vw;
+    margin-right: 4vw;
+  }
+
+  h1 {
+    font-size: 8vw;
+  }
+
+  .header {
+    text-align: center;
+  }
+}

@@ -1,0 +1,16 @@
+.custom-accordion-item .accordion-button:focus {
+    box-shadow: none;
+}
+
+.custom-accordion-item .accordion-button:not(.collapsed) {
+    background-color: #509eb9;
+    color: inherit;
+}
+
+.custom-accordion-item .accordion-button {
+    border: none;
+}
+
+.custom-accordion-item .card {
+    border: none;
+}
