@@ -1,13 +1,19 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home/Home";
-import Contact from "./pages/Contact/Contact";
-import Groups from "./pages/Groups/Groups";
-import News from "./pages/News/News";
-import Services from "./pages/Services/Services";
-import Navbar from "./components/Navbar/Navbar";
+
+// pages
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About";
+import Donate from "./Pages/Donate/Donate";
+import Contact from "./Pages/Contact/Contact";
+import Supporters from "./Pages/Supporters/Supporters";
+
+// components
+import Navbar from "./Components/Navbar/Navbar";
+
+// css
 import "./App.css";
 
-import Header from "./components/Header/Header";
+import Header from "./Components/Header/Header";
 
 function App() {
   return (
@@ -16,10 +22,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/donate" element={<Donate />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/groups" element={<Groups />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/supporters" element={<Supporters />} />
       </Routes>
     </Router>
   );
