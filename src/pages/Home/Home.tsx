@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import HomeInfo from "../../Components/HomeInfo/HomeInfo";
 import FacebookPage from "../../Components/Facebook/Facebook";
 import OurLocation from "../../Components/OurLocation/OurLocation";
 
@@ -26,10 +27,14 @@ const Home: React.FC = () => {
           </div>
         </div>
 
-        <div className="row mt-5">
-          <div className="col">{/* <FacebookPage /> */}</div>
+        <div className="row">
+          <HomeInfo />
+        </div>
 
-          <div className="col">{/* <OurLocation />{" "} */}</div>
+        <div className="row mt-5">
+          <div className="col">
+            <OurLocation />{" "}
+          </div>
         </div>
       </div>
     </>
