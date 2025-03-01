@@ -1,5 +1,5 @@
 {
-  "name": "penicuik-trinity-community-church",
+  "name": "food-facts-and-friends",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,9 +8,10 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
-
   },
+  "homepage": "https://davidtopping02.github.io/food-facts-and-friends", 
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "@react-google-maps/api": "^2.20.6",
