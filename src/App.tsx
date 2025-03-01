@@ -19,17 +19,29 @@ function App() {
   const basename = "/food-facts-and-friends";
 
   return (
-    <Router basename={basename}>
-      <Header />
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/donate" element={<Donate />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/supporters" element={<Supporters />} />
-      </Routes>
-    </Router>
+    <div id="appContainer" className="container">
+      <Router basename={basename}>
+        <div className="row pt-4">
+          <div className="col">
+            <Header />
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col">
+            <Navbar />
+          </div>
+        </div>
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/supporters" element={<Supporters />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 

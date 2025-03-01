@@ -1,6 +1,67 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  font-family: Arial, sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #046c34 !important;
+}
+
+p {
+  color: #555 !important;
+}
+
+a {
+  color: #4da38c !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: #adadad !important;
+}
+
+strong {
+  color: #d9534f !important;
+}
+
+em {
+  color: #6c757d !important;
+}
+
+/* Bootstrap Button Styles */
+.btn {
+  background-color: #4da38c !important; /* Button background color */
+  color: white !important; /* Button text color */
+  border: none !important; /* Remove default button border */
+  padding: 10px 20px !important; /* Add some padding */
+  font-size: 1rem !important; /* Set font size */
+  cursor: pointer !important; /* Change cursor on hover */
+  border-radius: 5px !important; /* Rounded corners */
+  transition: background-color 0.3s ease !important; /* Smooth background color transition */
+}
+
+.btn:hover {
+  background-color: #046c34 !important; /* Darker shade on hover */
+}
+
+.btn:focus {
+  outline: none !important; /* Remove focus outline */
+}
+
+/* Optional: If you want to target specific button variations (e.g., .btn-primary, .btn-secondary) */
+.btn-primary {
+  background-color: #4da38c !important;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background-color: #046c34 !important;
+}
+
+.btn-secondary {
+  background-color: #f0f0f0 !important;
+  color: #333 !important;
+}
+
+.btn-secondary:hover {
+  background-color: #adadad !important;
 }

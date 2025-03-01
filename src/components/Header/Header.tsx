@@ -5,15 +5,14 @@ import "./Header.css";
 
 const Header: React.FC = () => {
   return (
-    <div className="row align-items-center justify-content-center text-center">
-      {/* Logo aligned to the right */}
-      <div className="col-4 d-flex justify-content-end">
-        <img src={logo} alt="Logo" className="logo" />
-      </div>
-
-      {/* Text aligned to the left */}
-      <div className="col-8 d-flex flex-column align-items-start justify-content-center">
-        <h1>Welcome to Food Facts and Friends</h1>
+    <div className="container">
+      <div className="row align-items-center justify-content-center">
+        <div className="col-4 col-md-4 text-center text-md-end">
+          <img src={logo} alt="Logo" className="logo" />
+        </div>
+        <div className="col-8 col-md-6 text-center text-md-start">
+          <h1>Food Facts and Friends</h1>
+        </div>
       </div>
     </div>
   );

@@ -1,10 +1,6 @@
 import React from "react";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-
-const containerStyle = {
-  width: "100%",
-  height: "400px",
-};
+import "./OurLocation.css"; // Import the CSS file
 
 const center = {
   lat: 55.82806634557245,
@@ -15,29 +11,26 @@ const OurLocation: React.FC = () => {
   const googleMapsUrl = `https://www.google.com/maps?q=${center.lat},${center.lng}`;
 
   return (
-    <>
+    <div className="location-container">
       <h4>Where to find us</h4>
-
       <a
         href={googleMapsUrl}
         target="_blank"
         rel="noopener noreferrer"
-        style={{
-          marginTop: "10px",
-          marginBottom: "10px",
-          display: "block",
-          textAlign: "center",
-        }}
+        className="location-link"
       >
         Open in Google Maps
       </a>
-
       <LoadScript googleMapsApiKey="AIzaSyAUbF8xYUeRk7vQokGUV12_58taVXcivL4">
-        <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
+        <GoogleMap
+          mapContainerClassName="map-container"
+          center={center}
+          zoom={14}
+        >
           <Marker position={center} />
         </GoogleMap>
       </LoadScript>
-    </>
+    </div>
   );
 };
 
