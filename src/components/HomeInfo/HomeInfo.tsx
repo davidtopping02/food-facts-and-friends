@@ -27,10 +27,10 @@ const HomeInfo: React.FC = () => {
       {cardData.map((card, index) => (
         <div key={index} className="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex">
           <div className="card w-100 h-100">
-            <div className="card-body d-flex flex-column">
-              <h5 className="card-title">{card.title}</h5>
-              <p className="card-text">{card.text}</p>
-              <div className="mt-auto">
+            <div className="card-body d-flex flex-column justify-content-center align-items-center">
+              <h5 className="card-title text-center">{card.title}</h5>
+              <p className="card-text text-center">{card.text}</p>
+              <div className="mt-auto text-center">
                 <a href={card.link} className="btn btn-primary">
                   {card.buttonText}
                 </a>

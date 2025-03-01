@@ -3,7 +3,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #046c34 !important;
+  color: #044924 !important;
 }
 
 p {
@@ -11,43 +11,33 @@ p {
 }
 
 a {
-  color: #4da38c !important;
+  color: #408572 !important;
   text-decoration: none !important;
 }
 
 a:hover {
-  color: #adadad !important;
+  color: #03582b !important;
 }
 
-strong {
-  color: #d9534f !important;
-}
-
-em {
-  color: #6c757d !important;
-}
-
-/* Bootstrap Button Styles */
 .btn {
-  background-color: #4da38c !important; /* Button background color */
-  color: white !important; /* Button text color */
-  border: none !important; /* Remove default button border */
-  padding: 10px 20px !important; /* Add some padding */
-  font-size: 1rem !important; /* Set font size */
-  cursor: pointer !important; /* Change cursor on hover */
-  border-radius: 5px !important; /* Rounded corners */
-  transition: background-color 0.3s ease !important; /* Smooth background color transition */
+  background-color: #4da38c !important;
+  color: white !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  font-size: 1rem !important;
+  cursor: pointer !important;
+  border-radius: 5px !important;
+  transition: background-color 0.3s ease !important;
 }
 
 .btn:hover {
-  background-color: #046c34 !important; /* Darker shade on hover */
+  background-color: #31a888 !important;
 }
 
 .btn:focus {
-  outline: none !important; /* Remove focus outline */
+  outline: none !important;
 }
 
-/* Optional: If you want to target specific button variations (e.g., .btn-primary, .btn-secondary) */
 .btn-primary {
   background-color: #4da38c !important;
   color: white !important;
@@ -63,5 +53,9 @@ em {
 }
 
 .btn-secondary:hover {
-  background-color: #adadad !important;
+  background-color: #4da38c !important;
+}
+
+a.btn:hover {
+  background-color: #c5c5c5 !important;
 }
