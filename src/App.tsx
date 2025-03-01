@@ -9,7 +9,6 @@ import Supporters from "./Pages/Supporters/Supporters";
 
 // components
 import Navbar from "./Components/Navbar/Navbar";
-import Footer from "./Components/Footer/Footer";
 
 // css
 import "./App.css";
@@ -28,7 +27,6 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/supporters" element={<Supporters />} />
       </Routes>
-      {/* <Footer /> */}
     </Router>
   );
 }
