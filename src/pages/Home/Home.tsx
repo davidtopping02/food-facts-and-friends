@@ -1,17 +1,15 @@
 import React from "react";
 import "./Home.css";
 import HomeInfo from "../../Components/HomeInfo/HomeInfo";
-import FacebookPage from "../../Components/Facebook/Facebook";
 import OurLocation from "../../Components/OurLocation/OurLocation";
-
-import groupPhoto from "../../assets/images/home_banner.jpg";
+import homeBanner from "../../assets/images/home_banner.jpg";
 
 const Home: React.FC = () => {
   return (
     <>
-      <div className="container text-center">
-        <img src={groupPhoto} alt="Home Banner" className="img-fluid mt-3" />
+      <img src={homeBanner} alt="Home Banner" className="img-fluid mt-2" />
 
+      <div className="container text-center">
         <div className="row mt-5">
           <div className="col">
             <h5>
@@ -32,9 +30,7 @@ const Home: React.FC = () => {
         </div>
 
         <div className="row mt-5">
-          <div className="col">
-            <OurLocation />{" "}
-          </div>
+          <OurLocation />{" "}
         </div>
       </div>
     </>

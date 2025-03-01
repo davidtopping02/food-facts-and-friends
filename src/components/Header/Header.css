@@ -1,42 +1,17 @@
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
 .logo {
-    width: 15vw;
     max-width: 200px;
+    width: 100%;
+    height: auto;
 }
 
-h1 {
-    font-size: 5vw;
-    margin: 0;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .logo {
-        width: 25vw;
-        margin-right: 4vw;
-    }
-
-    h1 {
-        font-size: 7vw;
+        max-width: 150px; /* Reduce max size for smaller screens */
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 400px) {
     .logo {
-        width: 35vw;
-        margin-right: 4vw;
-    }
-
-    h1 {
-        font-size: 8vw;
-    }
-
-    .header {
-        text-align: center;
+        max-width: 120px;
     }
 }

@@ -16,7 +16,7 @@ const OurLocation: React.FC = () => {
 
   return (
     <>
-      <h4>Our Location</h4>
+      <h4>Where to find us</h4>
 
       <a
         href={googleMapsUrl}
@@ -34,7 +34,6 @@ const OurLocation: React.FC = () => {
 
       <LoadScript googleMapsApiKey="AIzaSyAUbF8xYUeRk7vQokGUV12_58taVXcivL4">
         <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
-          {/* Marker with Label */}
           <Marker position={center} />
         </GoogleMap>
       </LoadScript>

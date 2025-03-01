@@ -28,12 +28,14 @@ const HomeInfo: React.FC = () => {
         {cardData.map((card, index) => (
           <div key={index} className="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex">
             <div className="card w-100 h-100">
-              <div className="card-body text-center">
+              <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{card.title}</h5>
                 <p className="card-text">{card.text}</p>
-                <a href={card.link} className="btn btn-primary">
-                  {card.buttonText}
-                </a>
+                <div className="mt-auto">
+                  <a href={card.link} className="btn btn-primary">
+                    {card.buttonText}
+                  </a>
+                </div>
               </div>
             </div>
           </div>
