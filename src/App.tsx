@@ -16,8 +16,10 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 
 function App() {
+  const basename = "/food-facts-and-friends";
+
   return (
-    <Router>
+    <Router basename={basename}>
       <Header />
       <Navbar />
       <Routes>
