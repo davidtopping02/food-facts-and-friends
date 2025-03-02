@@ -7,10 +7,10 @@ const Header: React.FC = () => {
   return (
     <div className="container">
       <div className="row align-items-center justify-content-center">
-        <div className="col-4 col-md-4 text-center text-md-end">
+        <div className="col-5 col-md-4 text-center text-md-end">
           <img src={logo} alt="Logo" className="logo" />
         </div>
-        <div className="col-8 col-md-6 text-center text-md-start">
+        <div className="col-7 col-md-6 text-center text-md-start">
           <h1>Food Facts and Friends</h1>
         </div>
       </div>

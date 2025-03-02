@@ -1,36 +1,43 @@
 import React from "react";
-import "./Home.css";
+import { useSpring, animated } from "react-spring";
 import HomeInfo from "../../Components/HomeInfo/HomeInfo";
 import OurLocation from "../../Components/OurLocation/OurLocation";
 import homeBanner from "../../assets/images/home_banner.jpg";
 import CommunityHubMessage from "../../Components/CommunityHubMessage/CommunityHubMessage";
 
 const Home: React.FC = () => {
+  const fadeIn = useSpring({
+    opacity: 1,
+    from: { opacity: 0 },
+    delay: 300,
+    config: { duration: 800 },
+  });
+
   return (
     <>
-      <div className="row">
+      <animated.div className="row" style={fadeIn}>
         <div className="col">
           <img src={homeBanner} alt="Home Banner" className="img-fluid mt-2" />
         </div>
-      </div>
+      </animated.div>
 
-      <div className="row mt-2">
+      <animated.div className="row mt-2" style={fadeIn}>
         <div className="col">
           <CommunityHubMessage />
         </div>
-      </div>
+      </animated.div>
 
-      <div className="row mt-4">
+      <animated.div className="row mt-4" style={fadeIn}>
         <div className="col">
           <HomeInfo />
         </div>
-      </div>
+      </animated.div>
 
-      <div className="row mt-4">
+      <animated.div className="row mt-4" style={fadeIn}>
         <div className="col">
           <OurLocation />
         </div>
-      </div>
+      </animated.div>
     </>
   );
 };
