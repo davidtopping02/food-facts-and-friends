@@ -28,7 +28,7 @@ const HomeInfo: React.FC = () => {
         <div key={index} className="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex">
           <div className="card w-100 h-100">
             <div className="card-body d-flex flex-column justify-content-center align-items-center">
-              <h5 className="card-title text-center">{card.title}</h5>
+              <h3 className="card-title text-center">{card.title}</h3>
               <p className="card-text text-center">{card.text}</p>
               <div className="mt-auto text-center">
                 <a href={card.link} className="btn btn-primary">
