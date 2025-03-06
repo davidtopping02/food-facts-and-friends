@@ -14,11 +14,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Set up Node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "16" # Adjust as needed
+          node-version: "lts" # This will automatically use the latest LTS version of Node.js
 
       # Install dependencies and build the app
       - name: Install dependencies and build the app
