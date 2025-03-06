@@ -1,9 +1,17 @@
+// Object imports
 import React from "react";
 import { useSpring, animated } from "react-spring";
+
+// Component imports
 import HomeInfo from "../../Components/HomeInfo/HomeInfo";
 import OurLocation from "../../Components/OurLocation/OurLocation";
-import homeBanner from "../../assets/images/home_banner.jpg";
 import CommunityHubMessage from "../../Components/CommunityHubMessage/CommunityHubMessage";
+
+// Asset imports
+import homeBanner from "../../assets/images/home_banner.jpg";
+
+// Text imports
+import { communityMessageText, homeInfoCardText } from "./HomeText";
 
 const Home: React.FC = () => {
   const fadeIn = useSpring({
@@ -23,19 +31,23 @@ const Home: React.FC = () => {
 
       <animated.div className="row mt-2" style={fadeIn}>
         <div className="col">
-          <CommunityHubMessage />
+          <CommunityHubMessage text={communityMessageText} />
         </div>
       </animated.div>
 
       <animated.div className="row mt-4" style={fadeIn}>
         <div className="col">
-          <HomeInfo />
+          <HomeInfo cardData={homeInfoCardText} />
         </div>
       </animated.div>
 
       <animated.div className="row mt-4" style={fadeIn}>
         <div className="col">
-          <OurLocation />
+          <OurLocation
+            center={{ lat: 55.82806634557245, lng: -3.2227402445162725 }}
+            zoom={14}
+            googleMapsApiKey="AIzaSyAUbF8xYUeRk7vQokGUV12_58taVXcivL4"
+          />
         </div>
       </animated.div>
     </>

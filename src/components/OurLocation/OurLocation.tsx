@@ -1,13 +1,22 @@
-import React from "react";
+// React and library imports
+import React from "react"; // Import React
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import "./OurLocation.css"; // Import the CSS file
 
-const center = {
-  lat: 55.82806634557245,
-  lng: -3.2227402445162725,
-};
+// Component imports
+import "./OurLocation.css";
 
-const OurLocation: React.FC = () => {
+// Prop type definitions
+interface OurLocationProps {
+  center: { lat: number; lng: number };
+  zoom?: number;
+  googleMapsApiKey: string;
+}
+
+const OurLocation: React.FC<OurLocationProps> = ({
+  center,
+  zoom = 14,
+  googleMapsApiKey,
+}) => {
   const googleMapsUrl = `https://www.google.com/maps?q=${center.lat},${center.lng}`;
 
   return (
@@ -21,11 +30,12 @@ const OurLocation: React.FC = () => {
       >
         Open in Google Maps
       </a>
-      <LoadScript googleMapsApiKey="AIzaSyAUbF8xYUeRk7vQokGUV12_58taVXcivL4">
+      <LoadScript googleMapsApiKey={googleMapsApiKey}>
+        {" "}
         <GoogleMap
           mapContainerClassName="map-container"
           center={center}
-          zoom={14}
+          zoom={zoom}
         >
           <Marker position={center} />
         </GoogleMap>
