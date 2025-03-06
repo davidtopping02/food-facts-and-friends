@@ -1,0 +1,15 @@
+/* OurLocation.css */
+
+.location-container {
+  text-align: center;
+}
+
+.location-link {
+  display: inline-block;
+}
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+}
