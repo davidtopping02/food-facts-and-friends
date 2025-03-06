@@ -1,37 +1,30 @@
-name: Deploy to cPanel
+name: CI
 
 on:
   push:
     branches:
-      - main # Trigger deployment when changes are pushed to main
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "16"
+      - name: Install Node.js 22.14.0
+        run: |
+          curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+          sudo apt-get install -y nodejs
 
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm install
 
-      - name: Build the project
+      - name: Run tests
+        run: npm test
+
+      - name: Build project
         run: npm run build
-
-      - name: Push build to deploy branch
-        run: |
-          git checkout deploy
-          git config user.name "GitHub Actions"
-          git config user.email "github-actions@github.com"
-          cp -r dist/* .  # Copy the build files to the root
-          git add .
-          git commit -m "Update build files"
-          git push origin deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
