@@ -1,0 +1,57 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - main # This triggers the workflow on push to the main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16" # Adjust as needed
+
+      # Install dependencies and build the app
+      - name: Install dependencies and build the app
+        run: |
+          npm install
+          npm run build  # Builds the app for production
+
+      # Configure git to push to the deploy branch
+      - name: Configure git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "github-actions@github.com"
+
+      # Checkout the deploy branch and make sure it's up to date
+      - name: Checkout deploy branch
+        run: |
+          git fetch origin deploy
+          git checkout deploy || git checkout -b deploy
+
+      # Copy the build files to the deploy branch
+      - name: Copy build files to deploy branch
+        run: |
+          cp -R ./build/* .  # Copy the build files to the root of the repo
+          cp .cpanel.yml .  # Copy the .cpanel.yml to the root of the repo (for deployment)
+
+      # Commit and push changes to the deploy branch
+      - name: Commit and push changes to deploy branch
+        run: |
+          git add .
+          git commit -m "Deploy React app to cPanel"
+          git push origin deploy
+
+      # Optional: Clean up the workspace after deployment (if needed)
+      - name: Clean up
+        run: |
+          rm -rf build
