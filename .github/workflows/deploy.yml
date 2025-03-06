@@ -15,9 +15,22 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: FTP Deploy
+      - name: Setup Node.js
+        uses: actions/setup-node@v20 # Use latest stable Node.js version
+        with:
+          node-version: 20
+          cache: "npm"
+
+      - name: Install Dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
