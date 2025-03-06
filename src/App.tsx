@@ -16,11 +16,9 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 
 function App() {
-  const basename = "/food-facts-and-friends";
-
   return (
     <div id="appContainer" className="container">
-      <Router basename={basename}>
+      <Router>
         <div className="row pt-4">
           <div className="col">
             <Header />
