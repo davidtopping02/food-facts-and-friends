@@ -3,54 +3,35 @@ name: Deploy to cPanel
 on:
   push:
     branches:
-      - main # This triggers the workflow on push to the main branch
+      - main # Trigger deployment when changes are pushed to main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      # Checkout the repository
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v2
 
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "18"
+          node-version: "16" # Adjust to the version you're using
 
-      # Install dependencies and build the app
-      - name: Install dependencies and build the app
-        run: |
-          npm install
-          npm run build  # Builds the app for production
+      - name: Install dependencies
+        run: npm install
 
-      # Configure git to push to the deploy branch
-      - name: Configure git
+      - name: Build the project
+        run: npm run build
+
+      - name: Push build to deploy branch
         run: |
+          git checkout deploy
           git config user.name "GitHub Actions"
           git config user.email "github-actions@github.com"
-
-      # Checkout the deploy branch and make sure it's up to date
-      - name: Checkout deploy branch
-        run: |
-          git fetch origin deploy
-          git checkout deploy || git checkout -b deploy
-
-      # Copy the build files to the deploy branch
-      - name: Copy build files to deploy branch
-        run: |
-          cp -R ./build/* .  # Copy the build files to the root of the repo
-          cp .cpanel.yml .  # Copy the .cpanel.yml to the root of the repo (for deployment)
-
-      # Commit and push changes to the deploy branch
-      - name: Commit and push changes to deploy branch
-        run: |
+          cp -r dist/* .  # Copy the build files to the root
           git add .
-          git commit -m "Deploy React app to cPanel"
+          git commit -m "Update build files"
           git push origin deploy
-
-      # Optional: Clean up the workspace after deployment (if needed)
-      - name: Clean up
-        run: |
-          rm -rf build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
