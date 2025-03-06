@@ -8,7 +8,7 @@ on:
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
-    runs-on: ubuntu-latest
+    runs-on: windows-latest # 🔥 Use Windows instead of Ubuntu
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
