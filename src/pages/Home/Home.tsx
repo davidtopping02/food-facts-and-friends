@@ -21,6 +21,8 @@ const Home: React.FC = () => {
     config: { duration: 800 },
   });
 
+  const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
+
   return (
     <>
       <animated.div className="row" style={fadeIn}>
@@ -46,7 +48,7 @@ const Home: React.FC = () => {
           <OurLocation
             center={{ lat: 55.82806634557245, lng: -3.2227402445162725 }}
             zoom={14}
-            googleMapsApiKey="AIzaSyAUbF8xYUeRk7vQokGUV12_58taVXcivL4"
+            googleMapsApiKey={googleMapsApiKey} // Use the environment variable
           />
         </div>
       </animated.div>

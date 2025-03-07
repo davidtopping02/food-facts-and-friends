@@ -8,7 +8,7 @@ on:
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -23,6 +23,9 @@ jobs:
 
       - name: Install Dependencies
         run: npm install --legacy-peer-deps
+
+      - name: Inject API Key into .env
+        run: echo "VITE_GOOGLE_MAPS_API_KEY=${{ secrets.VITE_GOOGLE_MAPS_API_KEY }}" > .env
 
       - name: Build Project
         run: npm run build
