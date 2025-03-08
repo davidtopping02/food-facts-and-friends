@@ -6,7 +6,6 @@ import "./Header.css";
 
 const Header: React.FC = () => {
   return (
-    // <div className="container">
     <div className="row">
       <div className="col d-flex align-items-center justify-content-center">
         <Link
@@ -19,7 +18,6 @@ const Header: React.FC = () => {
         </Link>
       </div>
     </div>
-    // </div>
   );
 };
 
