@@ -1,6 +1,8 @@
 # Food Facts and Friends
 
-![Food Facts and Friends Logo](public/fff_logo.svg)
+<div align="center">
+  <img src="public/fff_logo.svg" alt="Food Facts and Friends Logo" width="300">
+</div>
 
 ## About
 
