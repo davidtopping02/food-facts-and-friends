@@ -1,50 +1,54 @@
-# React + TypeScript + Vite
+# Food Facts and Friends
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Food Facts and Friends Logo](public/fff_logo.svg)
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Food Facts and Friends Community Hub is here to help anyone who is facing hunger due to crisis. Whether it's parents skipping meals to feed their children, using any money to pay the rent, or facing the difficult choice of 'heat or eat,' we are here to support you. We are a Community Hub, supported by local businesses and individuals, working to prevent poverty and hunger across Midlothian.
 
-## Expanding the ESLint configuration
+## Website Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Home**: Introduction to our community and mission.
+- **About**: Learn more about our story and values.
+- **Donate**: Support our mission by making a contribution.
+- **Contact**: Get in touch with us for any inquiries or assistance.
+- **Our Supporters**: Acknowledging the businesses and individuals who support us.
+- **Community Hub**: Updates, news, and important announcements.
 
-- Configure the top-level `parserOptions` property like this:
+## How to Donate
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Support our mission by making a donation. Every contribution helps us continue our work in fighting hunger and supporting those in need.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Opening Hours
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Check our website for our latest opening hours to find the best time to visit us.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Latest News
+
+Stay updated with our latest events, community stories, and important announcements.
+
+## Where to Find Us
+
+[Open in Google Maps](https://www.google.com/maps/place/Food+Facts+Friends/data=!4m2!3m1!1s0x0:0x21e3237b483518ef?sa=X&ved=1t:2428&ictx=111)
+
+## Project Setup
+
+This project is built using React and TypeScript with Vite. To set it up locally:
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/food-facts-friends.git
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Run the development server:
+   ```sh
+   npm run dev
+   ```
+4. Open `http://localhost:5173/` in your browser.
+
+## Contributing
+
+We welcome contributions! Feel free to open issues or submit pull requests.
