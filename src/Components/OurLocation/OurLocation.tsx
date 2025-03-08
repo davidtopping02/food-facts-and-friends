@@ -1,6 +1,6 @@
 // React and library imports
-import React from "react"; // Import React
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
+import React, { useEffect, useRef } from "react";
+import { GoogleMap, LoadScript } from "@react-google-maps/api";
 
 // Component imports
 import "./OurLocation.css";
@@ -10,14 +10,40 @@ interface OurLocationProps {
   center: { lat: number; lng: number };
   zoom?: number;
   googleMapsApiKey: string;
+  mapId: string;
 }
 
 const OurLocation: React.FC<OurLocationProps> = ({
   center,
   zoom = 14,
   googleMapsApiKey,
+  mapId,
 }) => {
+  const mapRef = useRef<google.maps.Map | null>(null);
+  const markerRef = useRef<google.maps.marker.AdvancedMarkerElement | null>(
+    null
+  );
+
   const googleMapsUrl = `https://www.google.com/maps?q=${center.lat},${center.lng}`;
+
+  const onLoad = (map: google.maps.Map) => {
+    if (!window.google || !google.maps.marker) {
+      console.error("Google Maps API is not fully loaded yet.");
+      return;
+    }
+    mapRef.current = map;
+
+    markerRef.current = new google.maps.marker.AdvancedMarkerElement({
+      position: center,
+      map,
+    });
+  };
+
+  useEffect(() => {
+    if (markerRef.current) {
+      markerRef.current.position = center;
+    }
+  }, [center]);
 
   return (
     <div className="location-container">
@@ -30,15 +56,14 @@ const OurLocation: React.FC<OurLocationProps> = ({
       >
         Open in Google Maps
       </a>
-      <LoadScript googleMapsApiKey={googleMapsApiKey}>
-        {" "}
+      <LoadScript googleMapsApiKey={googleMapsApiKey} libraries={["marker"]}>
         <GoogleMap
           mapContainerClassName="map-container"
           center={center}
           zoom={zoom}
-        >
-          <Marker position={center} />
-        </GoogleMap>
+          onLoad={onLoad}
+          options={{ mapId }}
+        />
       </LoadScript>
     </div>
   );

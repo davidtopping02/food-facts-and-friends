@@ -49,6 +49,7 @@ const Home: React.FC = () => {
             center={{ lat: 55.82806634557245, lng: -3.2227402445162725 }}
             zoom={14}
             googleMapsApiKey={googleMapsApiKey}
+            mapId="74ab8317d68dac1c "
           />
         </div>
       </animated.div>
