@@ -25,7 +25,9 @@ jobs:
         run: npm install --legacy-peer-deps
 
       - name: Inject API Key into .env
-        run: echo "VITE_GOOGLE_MAPS_API_KEY=${{ secrets.VITE_GOOGLE_MAPS_API_KEY }}" > .env
+        run: |
+          echo "VITE_GOOGLE_MAPS_API_KEY=${{ secrets.VITE_GOOGLE_MAPS_API_KEY }}" >> .env
+          cat .env
 
       - name: Build Project
         run: npm run build
