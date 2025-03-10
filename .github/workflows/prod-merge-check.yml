@@ -1,0 +1,22 @@
+name: Enforce Merge From Pre-Prod
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  check-source-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if PR is from pre-prod
+        run: |
+          BASE_BRANCH=$(jq -r '.base.ref' "$GITHUB_EVENT_PATH")
+          HEAD_BRANCH=$(jq -r '.head.ref' "$GITHUB_EVENT_PATH")
+
+          if [ "$BASE_BRANCH" != "main" ] || [ "$HEAD_BRANCH" != "pre-prod" ]; then
+            echo "❌ Merge to main is only allowed from pre-prod!"
+            exit 1
+          else
+            echo "✅ Merge check passed!"
+          fi

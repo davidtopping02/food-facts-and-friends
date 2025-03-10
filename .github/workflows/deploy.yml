@@ -4,16 +4,17 @@ on:
   push:
     branches:
       - main
+      - pre-prod
 
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
+  Deploy:
+    name: Deploy to Server
     runs-on: windows-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 1
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -31,10 +32,21 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      - name: Deploy to FTP
+      - name: Deploy to FTP (Pre-Prod)
+        if: github.ref == 'refs/heads/pre-prod'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
+
+      - name: Deploy to FTP (Main)
+        if: github.ref == 'refs/heads/main'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          # server-dir: /path/to/main/
