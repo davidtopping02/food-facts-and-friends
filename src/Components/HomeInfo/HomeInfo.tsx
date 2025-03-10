@@ -1,5 +1,6 @@
 // Object imports
 import React from "react";
+import { Link } from "react-router-dom";
 
 // Type imports
 import { CardData } from "../../Types/CardData";
@@ -18,9 +19,9 @@ const HomeInfo: React.FC<HomeInfoProps> = ({ cardData }) => {
             <div className="card-body text-center d-flex flex-column justify-content-center">
               <h3 className="heading heading-2">{card.title}</h3>
               <p className="card-text">{card.text}</p>
-              <a href={card.link} className="btn-custom mt-auto">
+              <Link to={card.link} className="btn-custom mt-auto">
                 {card.buttonText}
-              </a>
+              </Link>
             </div>
           </div>
         </div>
