@@ -4,6 +4,12 @@
   <img src="public/fff_logo.svg" alt="Food Facts and Friends Logo" width="300">
 </div>
 
+## Links
+
+
+- **Live**: [https://www.foodfactsfriends.org.uk/](https://www.foodfactsfriends.org.uk/) (the new site is not live yet!)
+- **Pre-deployment**: [https://dev.foodfactsfriends.org.uk/](https://dev.foodfactsfriends.org.uk/)
+
 ## About
 
 Food Facts and Friends Community Hub is here to help anyone who is facing hunger due to crisis. Whether it's parents skipping meals to feed their children, using any money to pay the rent, or facing the difficult choice of 'heat or eat,' we are here to support you. We are a Community Hub, supported by local businesses and individuals, working to prevent poverty and hunger across Midlothian.
