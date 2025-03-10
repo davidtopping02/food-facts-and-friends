@@ -13,6 +13,10 @@
   },
   "homepage": "https://davidtopping02.github.io/food-facts-and-friends",
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^6.4.7",
+    "@mui/material": "^6.4.7",
     "@popperjs/core": "^2.11.8",
     "@react-google-maps/api": "^2.20.6",
     "bootstrap": "^5.3.3",
