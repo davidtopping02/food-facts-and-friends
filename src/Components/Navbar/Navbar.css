@@ -1,5 +1,7 @@
 .custom-navbar {
     background-color: #dfdfdf !important;
+    border-radius: 6px; 
+    font-size: 18px;
 }
 
 .navbar-nav {

@@ -20,7 +20,6 @@ const Navbar: React.FC = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Collapsible Navigation */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             {[

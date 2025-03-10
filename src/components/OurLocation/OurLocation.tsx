@@ -47,7 +47,7 @@ const OurLocation: React.FC<OurLocationProps> = ({
 
   return (
     <div className="location-container">
-      <h4>Where to find us</h4>
+      <h3 className="heading heading-3">Where to find us</h3>
       <a
         href={googleMapsUrl}
         target="_blank"
