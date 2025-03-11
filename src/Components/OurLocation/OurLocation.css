@@ -1,0 +1,15 @@
+.location-container {
+  text-align: center;
+}
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
+}
+
+
+a {
+  color: var(--link-color) ;
+  text-decoration: none !important;
+}
