@@ -32,6 +32,15 @@ jobs:
       - name: Build Project
         run: npm run build
 
+      - name: Create .htaccess File
+        run: |
+          echo "Options -MultiViews" > ./dist/.htaccess
+          echo "RewriteEngine On" >> ./dist/.htaccess
+          echo "RewriteBase /" >> ./dist/.htaccess
+          echo "RewriteCond %{REQUEST_FILENAME} !-f" >> ./dist/.htaccess
+          echo "RewriteCond %{REQUEST_FILENAME} !-d" >> ./dist/.htaccess
+          echo "RewriteRule ^ index.html [L]" >> ./dist/.htaccess
+
       - name: Deploy to FTP (Pre-Prod)
         if: github.ref == 'refs/heads/pre-prod'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -49,4 +58,3 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          # server-dir: /path/to/main/
