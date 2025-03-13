@@ -32,14 +32,8 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      - name: Create .htaccess File
-        run: |
-          echo "Options -MultiViews" > ./dist/.htaccess
-          echo "RewriteEngine On" >> ./dist/.htaccess
-          echo "RewriteBase /" >> ./dist/.htaccess
-          echo "RewriteCond %{REQUEST_FILENAME} !-f" >> ./dist/.htaccess
-          echo "RewriteCond %{REQUEST_FILENAME} !-d" >> ./dist/.htaccess
-          echo "RewriteRule ^ index.html [L]" >> ./dist/.htaccess
+      - name: Copy .htaccess to Build Directory
+        run: cp .htaccess ./dist/
 
       - name: Deploy to FTP (Pre-Prod)
         if: github.ref == 'refs/heads/pre-prod'
