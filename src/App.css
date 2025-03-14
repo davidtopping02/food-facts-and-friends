@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
 
 :root {
   --primary-color: #044924;
+  --primary-color-ligher: #085f31;
   --secondary-color: #555;
   --link-color: #408572;
   --link-hover-color: #03582b;
@@ -23,14 +24,18 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+
+
 .heading {
-  color: var(--primary-color);
+  color: var(--primary-color-ligher);
 }
 
 .heading-1 {
   font-family: 'Bungee', cursive;
   text-align: center;
   font-size: var(--font-size-h1);
+  color: var(--primary-color);
+
 }
 
 .heading-2,
@@ -46,6 +51,12 @@ body {
 .heading-4 { font-size: var(--font-size-h4); }
 .heading-5 { font-size: var(--font-size-h5); }
 .heading-6 { font-size: var(--font-size-h6); }
+
+.page-title {
+  font-family: 'Pacifico', cursive;
+  font-size: var(--font-size-h2); 
+  text-align: center;
+}
 
 p {
   color: var(--secondary-color);
