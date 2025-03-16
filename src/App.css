@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
 
 :root {
   --primary-color: #044924;
@@ -21,21 +21,18 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
-
-
 
 .heading {
   color: var(--primary-color-ligher);
 }
 
 .heading-1 {
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
   text-align: center;
   font-size: var(--font-size-h1);
   color: var(--primary-color);
-
 }
 
 .heading-2,
@@ -43,18 +40,28 @@ body {
 .heading-4,
 .heading-5,
 .heading-6 {
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
-.heading-2 { font-size: var(--font-size-h2); }
-.heading-3 { font-size: var(--font-size-h3); }
-.heading-4 { font-size: var(--font-size-h4); }
-.heading-5 { font-size: var(--font-size-h5); }
-.heading-6 { font-size: var(--font-size-h6); }
+.heading-2 {
+  font-size: var(--font-size-h2);
+}
+.heading-3 {
+  font-size: var(--font-size-h3);
+}
+.heading-4 {
+  font-size: var(--font-size-h4);
+}
+.heading-5 {
+  font-size: var(--font-size-h5);
+}
+.heading-6 {
+  font-size: var(--font-size-h6);
+}
 
 .page-title {
-  font-family: 'Pacifico', cursive;
-  font-size: var(--font-size-h2); 
+  font-family: "Pacifico", cursive;
+  font-size: var(--font-size-h2);
   text-align: center;
 }
 
@@ -64,26 +71,30 @@ p {
 }
 
 a {
-  color: var(--link-color) ;
+  color: var(--link-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--link-hover-color) ;
+  color: var(--link-hover-color);
 }
 
 .btn-custom {
   background-color: var(--btn-bg);
   color: white;
   border-radius: 5px;
-  padding: 15px 30px; 
+  padding: 15px 30px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  text-decoration: none; 
-  display: inline-block; 
+  text-decoration: none;
+  display: inline-block;
 }
 
 .btn-custom:hover {
   background-color: var(--btn-hover-bg);
-  color: white; 
+  color: white;
+}
+
+.mdb-input-wrapper label {
+  position: static !important;
 }
