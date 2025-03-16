@@ -19,11 +19,9 @@ function SupportersGallery({ logos }: SupportersGalleryProps) {
       },
       { threshold: 0.1 }
     );
-
     document
       .querySelectorAll(".logo-item")
       .forEach((el) => observer.observe(el));
-
     return () => observer.disconnect();
   }, []);
 

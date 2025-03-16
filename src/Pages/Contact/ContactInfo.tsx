@@ -3,37 +3,52 @@ import { contactInfoCardText } from "./ContactText";
 
 export const ContactInfo = () => {
   return (
-    <>
-      <div className="row justify-content-center">
-        <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
-          <div className="card w-200 h-200">
-            <div className="card-body text-center d-flex flex-column justify-content-center">
-              <h2 className="heading heading-2">{contactInfoCardText.name}</h2>
-              <h3 className="heading heading-3">{contactInfoCardText.role}</h3>
-              <div>
-                <div className="row">
-                  <Envelope className="col align-self-center" />
-                  <p className="col align-self-center">
-                    {contactInfoCardText.email}
-                  </p>
-                </div>
-                <div className="row">
-                  <TelephoneFill className="col align-self-center" />
-                  <p className="col align-self-center">
-                    {contactInfoCardText.primaryPhone}
-                  </p>
-                </div>
-                <div className="row">
-                  <TelephoneFill className="col align-self-center" />
-                  <p className="col align-self-center">
-                    {contactInfoCardText.secondaryPhone}
-                  </p>
+    <div
+      className="d-flex justify-content-center align-items-center"
+      style={{ height: "100vh" }}
+    >
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col ">
+            <div className="card w-100">
+              <div className="card-body text-center h-100">
+                <h2 className="heading heading-2">
+                  {contactInfoCardText.name}
+                </h2>
+                <h3 className="heading heading-3">
+                  {contactInfoCardText.role}
+                </h3>
+                <div>
+                  <div className="row align-items-center">
+                    <div className="col-auto">
+                      <Envelope />
+                    </div>
+                    <div className="col">
+                      <p>{contactInfoCardText.email}</p>
+                    </div>
+                  </div>
+                  <div className="row align-items-center">
+                    <div className="col-auto">
+                      <TelephoneFill />
+                    </div>
+                    <div className="col">
+                      <p>{contactInfoCardText.primaryPhone}</p>
+                    </div>
+                  </div>
+                  <div className="row align-items-center">
+                    <div className="col-auto">
+                      <TelephoneFill />
+                    </div>
+                    <div className="col">
+                      <p>{contactInfoCardText.secondaryPhone}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
