@@ -3,37 +3,33 @@ import { contactInfoCardText } from "./ContactText";
 
 export const ContactInfo = () => {
   return (
-    <>
-      <div className="row justify-content-center">
-        <div className="col-lg-4 col-md-6 col-sm-12 mb-4">
-          <div className="card w-200 h-200">
-            <div className="card-body text-center d-flex flex-column justify-content-center">
-              <h2 className="heading heading-2">{contactInfoCardText.name}</h2>
-              <h3 className="heading heading-3">{contactInfoCardText.role}</h3>
-              <div>
-                <div className="row">
-                  <Envelope className="col align-self-center" />
-                  <p className="col align-self-center">
-                    {contactInfoCardText.email}
-                  </p>
-                </div>
-                <div className="row">
-                  <TelephoneFill className="col align-self-center" />
-                  <p className="col align-self-center">
-                    {contactInfoCardText.primaryPhone}
-                  </p>
-                </div>
-                <div className="row">
-                  <TelephoneFill className="col align-self-center" />
-                  <p className="col align-self-center">
-                    {contactInfoCardText.secondaryPhone}
-                  </p>
-                </div>
+    <div className="container-fluid pt-1 pb-1 ">
+      <div className="card">
+        <div className="card-body text-center">
+          <h3 className="heading heading-3">{contactInfoCardText.name}</h3>
+          <h4 className="heading heading-4">{contactInfoCardText.role}</h4>
+          <div className="pt-4 pb-4">
+            <div className="row ">
+              <div className="col-2">
+                <Envelope />
               </div>
+              <div className="col-10">{contactInfoCardText.email}</div>
+            </div>
+            <div className="row ">
+              <div className="col-2">
+                <TelephoneFill />
+              </div>
+              <div className="col-10">{contactInfoCardText.primaryPhone}</div>
+            </div>
+            <div className="row ">
+              <div className="col-2">
+                <TelephoneFill />
+              </div>
+              <div className="col-10">{contactInfoCardText.secondaryPhone}</div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

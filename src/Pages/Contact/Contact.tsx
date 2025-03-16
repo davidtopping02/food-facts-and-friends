@@ -12,25 +12,28 @@ function Contact() {
   });
 
   return (
-    <>
-      {/* <div className="container mt-5 p-0 m-0"> */}
-      <animated.div className="row" style={fadeIn}>
-        <h1 className="heading heading-1">Contact Page</h1>
+    <div className="mt-5">
+      <animated.div className="row mb-5" style={fadeIn}>
+        <h2 className="heading page-title">Contact Page</h2>
       </animated.div>
-      {/* </div>s */}
+      <div className="container">
+        <div className="row align-items-stretch">
+          {/* First Column */}
+          <div className="col-md-6">
+            <animated.div style={fadeIn}>
+              <ContactForm />
+            </animated.div>
+          </div>
 
-      {/* <div className="container mt-5 p-0 m-0"> */}
-      <div className="row">
-        <div className="col-sm-6">
-          <ContactForm />
-        </div>
-
-        <div className="col-sm-6">
-          <ContactInfo />
+          {/* Second Column */}
+          <div className="col-m-6 col">
+            <animated.div style={fadeIn}>
+              <ContactInfo />
+            </animated.div>
+          </div>
         </div>
       </div>
-      {/* </div> */}
-    </>
+    </div>
   );
 }
 
