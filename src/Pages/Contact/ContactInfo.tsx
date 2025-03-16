@@ -3,35 +3,29 @@ import { contactInfoCardText } from "./ContactText";
 
 export const ContactInfo = () => {
   return (
-    <div className="container-fluid pt-1 pb-1">
+    <div className="container-fluid pt-1 pb-1 ">
       <div className="card">
         <div className="card-body text-center">
-          <h2 className="heading heading-2">{contactInfoCardText.name}</h2>
-          <h3 className="heading heading-3">{contactInfoCardText.role}</h3>
-          <div>
-            <div className="row align-items-center">
-              <div className="col">
+          <h3 className="heading heading-3">{contactInfoCardText.name}</h3>
+          <h4 className="heading heading-4">{contactInfoCardText.role}</h4>
+          <div className="pt-4 pb-4">
+            <div className="row ">
+              <div className="col-2">
                 <Envelope />
               </div>
-              <div className="col">
-                <p>{contactInfoCardText.email}</p>
-              </div>
+              <div className="col-10">{contactInfoCardText.email}</div>
             </div>
-            <div className="row align-items-center">
-              <div className="col">
+            <div className="row ">
+              <div className="col-2">
                 <TelephoneFill />
               </div>
-              <div className="col">
-                <p>{contactInfoCardText.primaryPhone}</p>
-              </div>
+              <div className="col-10">{contactInfoCardText.primaryPhone}</div>
             </div>
-            <div className="row align-items-center">
-              <div className="col">
+            <div className="row ">
+              <div className="col-2">
                 <TelephoneFill />
               </div>
-              <div className="col">
-                <p>{contactInfoCardText.secondaryPhone}</p>
-              </div>
+              <div className="col-10">{contactInfoCardText.secondaryPhone}</div>
             </div>
           </div>
         </div>
