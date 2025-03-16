@@ -13,11 +13,11 @@ function Contact() {
 
   return (
     <div className="mt-5">
-      <animated.div className="row" style={fadeIn}>
+      <animated.div className="row mb-5" style={fadeIn}>
         <h2 className="heading page-title">Contact Page</h2>
       </animated.div>
       <div className="container">
-        <div className="row">
+        <div className="row align-items-stretch">
           {/* First Column */}
           <div className="col-md-6">
             <animated.div style={fadeIn}>
@@ -26,7 +26,7 @@ function Contact() {
           </div>
 
           {/* Second Column */}
-          <div className="col-md-6">
+          <div className="col-m-6 col">
             <animated.div style={fadeIn}>
               <ContactInfo />
             </animated.div>

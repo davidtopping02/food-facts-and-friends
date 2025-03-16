@@ -1,11 +1,8 @@
 import { MDBInput, MDBBtn, MDBTextArea } from "mdb-react-ui-kit";
 
 export const ContactForm = () => (
-  <div
-    className="d-flex justify-content-center align-items-center"
-    style={{ height: "100vh" }}
-  >
-    <div className="card w-100" style={{ maxWidth: "400px" }}>
+  <div className="container-fluid pt-1 pb-1">
+    <div className="card">
       <div className="card-body text-center d-flex flex-column justify-content-center">
         <form
           id="form"
