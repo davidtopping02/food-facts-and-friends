@@ -75,10 +75,13 @@ a:hover {
   text-decoration: none;
   display: inline-block;
   transition: background-color 0.3s ease;
+  
 }
 
 .btn-custom:hover {
   background-color: var(--btn-hover-bg);
+  color: white;
+
 }
 
 .mdb-input-wrapper label {
