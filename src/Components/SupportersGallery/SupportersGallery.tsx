@@ -9,7 +9,7 @@ function SupportersGallery({ logos }: SupportersGalleryProps) {
   useFadeIn(".logo-item");
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-4">
       <div className="row justify-content-center">
         {logos.map((logo, index) => (
           <div
