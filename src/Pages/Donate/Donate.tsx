@@ -7,30 +7,31 @@ import Banner from "../../Components/Banner/Banner";
 // import TimeImage from "../../assets/images/donate/time.jpg";
 // import FoodImage from "../../assets/images/donate/food.jpg";
 // import RecycleImage from "../../assets/images/donate/recycle.jpg";
+import SampleImaage from "../../assets/images/sample_image.jpg";
 
 function Donate() {
   const donationOptions = [
     {
       title: "Donate Money",
-      // image: MoneyImage,
+      image: SampleImaage,
       link: "/donate/money",
       description: "Contribute financially to support our mission.",
     },
     {
       title: "Donate Time",
-      // image: TimeImage,
+      image: SampleImaage,
       link: "/donate/time",
       description: "Volunteer your time and make a difference.",
     },
     {
       title: "Donate Food Items",
-      // image: FoodImage,
+      image: SampleImaage,
       link: "/donate/food",
       description: "Help us by donating non-perishable food items.",
     },
     {
       title: "Donate Recycle Items",
-      // image: RecycleImage,
+      image: SampleImaage,
       link: "/donate/recycle",
       description: "Donate recyclable items and help the environment.",
     },
