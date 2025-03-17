@@ -1,13 +1,14 @@
 import React from "react";
-import { animated } from "react-spring";
 
 import HomeInfo from "../../Components/HomeInfo/HomeInfo";
 import OurLocation from "../../Components/OurLocation/OurLocation";
 import CommunityHubMessage from "../../Components/CommunityHubMessage/CommunityHubMessage";
+import Banner from "../../Components/Banner/Banner";
 
 import homeBanner from "../../assets/images/banners/home_banner.jpg";
 import useFadeInOnLoad from "../../hooks/useFadeInOnLoad";
 import { communityMessageText, homeInfoCardText } from "./HomeText";
+import { animated } from "react-spring";
 
 const Home: React.FC = () => {
   const fadeIn = useFadeInOnLoad();
@@ -15,11 +16,8 @@ const Home: React.FC = () => {
 
   return (
     <>
-      <animated.div className="row" style={fadeIn}>
-        <div className="col">
-          <img src={homeBanner} alt="Home Banner" className="img-fluid mt-2" />
-        </div>
-      </animated.div>
+      {/* banner handles its own fade */}
+      <Banner imageSrc={homeBanner} altText="Home Banner" />
 
       <animated.div className="row mt-2" style={fadeIn}>
         <div className="col">
