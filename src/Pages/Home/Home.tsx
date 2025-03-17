@@ -1,26 +1,16 @@
-// Object imports
 import React from "react";
-import { useSpring, animated } from "react-spring";
+import { animated } from "react-spring";
 
-// Component imports
 import HomeInfo from "../../Components/HomeInfo/HomeInfo";
 import OurLocation from "../../Components/OurLocation/OurLocation";
 import CommunityHubMessage from "../../Components/CommunityHubMessage/CommunityHubMessage";
 
-// Asset imports
-import homeBanner from "../../assets/images/home_banner.jpg";
-
-// Text imports
+import homeBanner from "../../assets/images/banners/home_banner.jpg";
+import useFadeInOnLoad from "../../hooks/useFadeInOnLoad";
 import { communityMessageText, homeInfoCardText } from "./HomeText";
 
 const Home: React.FC = () => {
-  const fadeIn = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-    delay: 300,
-    config: { duration: 800 },
-  });
-
+  const fadeIn = useFadeInOnLoad();
   const googleMapsApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
   return (
@@ -49,7 +39,7 @@ const Home: React.FC = () => {
             center={{ lat: 55.82806634557245, lng: -3.2227402445162725 }}
             zoom={14}
             googleMapsApiKey={googleMapsApiKey}
-            mapId="74ab8317d68dac1c "
+            mapId="74ab8317d68dac1c"
           />
         </div>
       </animated.div>

@@ -1,29 +1,12 @@
 import "./SupportersGallery.css";
-import { useEffect } from "react";
+import useFadeIn from "../../hooks/useFadeInOnScroll";
 
 interface SupportersGalleryProps {
   logos: { default: string }[];
 }
 
 function SupportersGallery({ logos }: SupportersGalleryProps) {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("fade-in");
-          } else {
-            entry.target.classList.remove("fade-in");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    document
-      .querySelectorAll(".logo-item")
-      .forEach((el) => observer.observe(el));
-    return () => observer.disconnect();
-  }, []);
+  useFadeIn(".logo-item");
 
   return (
     <div className="container mt-5">
