@@ -4,7 +4,7 @@
 
 :root {
   --primary-color: #044924;
-  --primary-color-ligher: #085f31;
+  --primary-color-lighter: #085f31;
   --secondary-color: #555;
   --link-color: #408572;
   --link-hover-color: #03582b;
@@ -25,45 +25,31 @@ body {
 }
 
 .heading {
-  color: var(--primary-color-ligher);
+  color: var(--primary-color-lighter);
 }
 
-.heading-1 {
+.heading-1, .page-title {
   font-family: "Bungee", cursive;
-  text-align: center;
   font-size: var(--font-size-h1);
+  text-align: center;
   color: var(--primary-color);
 }
 
-.heading-2,
-.heading-3,
-.heading-4,
-.heading-5,
-.heading-6 {
-  font-family: "Pacifico", cursive;
-}
-
-.heading-2 {
-  font-size: var(--font-size-h2);
-}
-.heading-3 {
-  font-size: var(--font-size-h3);
-}
-.heading-4 {
-  font-size: var(--font-size-h4);
-}
-.heading-5 {
-  font-size: var(--font-size-h5);
-}
-.heading-6 {
-  font-size: var(--font-size-h6);
-}
-
 .page-title {
+  color: var(--primary-color-lighter);
   font-family: "Pacifico", cursive;
-  font-size: var(--font-size-h2);
-  text-align: center;
+
 }
+
+.heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+  font-family: "Pacifico", cursive;
+}
+
+.heading-2 { font-size: var(--font-size-h2); }
+.heading-3 { font-size: var(--font-size-h3); }
+.heading-4 { font-size: var(--font-size-h4); }
+.heading-5 { font-size: var(--font-size-h5); }
+.heading-6 { font-size: var(--font-size-h6); }
 
 p {
   color: var(--secondary-color);
@@ -73,6 +59,7 @@ p {
 a {
   color: var(--link-color);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
@@ -85,14 +72,13 @@ a:hover {
   border-radius: 5px;
   padding: 15px 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   text-decoration: none;
   display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
 .btn-custom:hover {
   background-color: var(--btn-hover-bg);
-  color: white;
 }
 
 .mdb-input-wrapper label {

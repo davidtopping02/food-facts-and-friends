@@ -11,18 +11,23 @@ function Supporters() {
   const fadeIn = useFadeInOnLoad();
 
   return (
-    <animated.div style={fadeIn}>
-      <div className="row">
-        <div className="col">
+    <>
+      <animated.div style={fadeIn}>
+        <div className="row">
           <img
             src={supportersBanner}
             alt="Supporters Banner"
             className="img-fluid mt-2"
           />
         </div>
-      </div>
+
+        <div className="row">
+          <h2 className="heading page-title mt-5">Our Supporters Gallery</h2>
+        </div>
+      </animated.div>
+
       <SupportersGallery logos={logos} />
-    </animated.div>
+    </>
   );
 }
 
