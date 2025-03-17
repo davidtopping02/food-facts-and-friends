@@ -66,24 +66,21 @@ a:hover {
   color: var(--link-hover-color);
 }
 
-.btn-custom {
-  background-color: var(--btn-bg);
-  color: white;
+button.btn-custom.btn-primary,
+.btn-custom.btn-primary {
+  background-color: var(--btn-bg) !important;
+  color: white !important;
+  border: none !important;
+  padding: 15px 30px !important;
+  font-size: 1.1rem !important; 
+  min-width: 150px; 
   border-radius: 5px;
-  padding: 15px 30px;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-  
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn-custom:hover {
-  background-color: var(--btn-hover-bg);
-  color: white;
-
-}
-
-.mdb-input-wrapper label {
-  position: static !important;
+button.btn-custom.btn-primary:hover,
+.btn-custom.btn-primary:hover,
+button.btn-custom.btn-primary:focus,
+.btn-custom.btn-primary:focus {
+  background-color: var(--btn-hover-bg) !important;
 }
