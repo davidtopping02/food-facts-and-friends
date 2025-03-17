@@ -32,6 +32,9 @@ jobs:
       - name: Build Project
         run: npm run build
 
+      - name: Copy .htaccess to Build Directory
+        run: cp .htaccess ./dist/
+
       - name: Deploy to FTP (Pre-Prod)
         if: github.ref == 'refs/heads/pre-prod'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -49,4 +52,3 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          # server-dir: /path/to/main/

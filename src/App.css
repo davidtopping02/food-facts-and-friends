@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
 
 :root {
   --primary-color: #044924;
+  --primary-color-lighter: #085f31;
   --secondary-color: #555;
   --link-color: #408572;
   --link-hover-color: #03582b;
@@ -20,25 +21,28 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .heading {
+  color: var(--primary-color-lighter);
+}
+
+.heading-1, .page-title {
+  font-family: "Bungee", cursive;
+  font-size: var(--font-size-h1);
+  text-align: center;
   color: var(--primary-color);
 }
 
-.heading-1 {
-  font-family: 'Bungee', cursive;
-  text-align: center;
-  font-size: var(--font-size-h1);
+.page-title {
+  color: var(--primary-color-lighter);
+  font-family: "Pacifico", cursive;
+
 }
 
-.heading-2,
-.heading-3,
-.heading-4,
-.heading-5,
-.heading-6 {
-  font-family: 'Pacifico', cursive;
+.heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+  font-family: "Pacifico", cursive;
 }
 
 .heading-2 { font-size: var(--font-size-h2); }
@@ -53,26 +57,30 @@ p {
 }
 
 a {
-  color: var(--link-color) ;
+  color: var(--link-color);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-  color: var(--link-hover-color) ;
+  color: var(--link-hover-color);
 }
 
-.btn-custom {
-  background-color: var(--btn-bg);
-  color: white;
+button.btn-custom.btn-primary,
+.btn-custom.btn-primary {
+  background-color: var(--btn-bg) !important;
+  color: white !important;
+  border: none !important;
+  padding: 15px 30px !important;
+  font-size: 1.1rem !important; 
+  min-width: 150px; 
   border-radius: 5px;
-  padding: 15px 30px; 
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-decoration: none; 
-  display: inline-block; 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.btn-custom:hover {
-  background-color: var(--btn-hover-bg);
-  color: white; 
+button.btn-custom.btn-primary:hover,
+.btn-custom.btn-primary:hover,
+button.btn-custom.btn-primary:focus,
+.btn-custom.btn-primary:focus {
+  background-color: var(--btn-hover-bg) !important;
 }
