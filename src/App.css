@@ -79,7 +79,7 @@ a:hover {
   color: var(--link-hover-color);
 }
 
-.btn-custom {
+.btn-custom, button.btn-custom {
   background-color: var(--btn-bg);
   color: white;
   border-radius: 5px;
@@ -90,7 +90,7 @@ a:hover {
   display: inline-block;
 }
 
-.btn-custom:hover {
+.btn-custom:hover, button.btn-custom:hover {
   background-color: var(--btn-hover-bg);
   color: white;
 }
