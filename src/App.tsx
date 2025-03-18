@@ -7,8 +7,8 @@ import About from "./Pages/About/About";
 import Donate from "./Pages/Donate/Donate";
 import Contact from "./Pages/Contact/Contact";
 import Supporters from "./Pages/Supporters/Supporters";
-import OpeningHours from "./Pages/OpeningHours/About";
-import NewsLetter from "./Pages/NewsLetter/About";
+import OpeningHours from "./Pages/OpeningHours/OpeninngHours";
+import NewsLetter from "./Pages/NewsLetter/NewsLetter";
 
 // Components
 import Header from "./Components/Header/Header";

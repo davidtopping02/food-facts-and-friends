@@ -1,3 +1,4 @@
+import { Container, Row, Col, Image } from "react-bootstrap";
 import "./SupportersGallery.css";
 import useFadeIn from "../../hooks/useFadeInOnScroll";
 
@@ -9,22 +10,26 @@ function SupportersGallery({ logos }: SupportersGalleryProps) {
   useFadeIn(".logo-item");
 
   return (
-    <div className="container mt-4">
-      <div className="row justify-content-center">
+    <Container className="mt-4">
+      <Row className="justify-content-center">
         {logos.map((logo, index) => (
-          <div
+          <Col
             key={index}
-            className="col-6 col-md-4 col-lg-4 mb-4 logo-item text-center"
+            xs={6}
+            md={4}
+            lg={4}
+            className="mb-4 logo-item text-center"
           >
-            <img
+            <Image
               src={logo.default}
               alt={`Supporter Logo ${index + 1}`}
-              className="img-fluid logo-img"
+              fluid
+              className="logo-img"
             />
-          </div>
+          </Col>
         ))}
-      </div>
-    </div>
+      </Row>
+    </Container>
   );
 }
 

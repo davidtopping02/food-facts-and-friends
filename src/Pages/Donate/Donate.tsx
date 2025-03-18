@@ -8,6 +8,7 @@ import StyledButton from "../../Components/Button/StyledButton";
 // import TimeImage from "../../assets/images/donate/time.jpg";
 // import FoodImage from "../../assets/images/donate/food.jpg";
 // import RecycleImage from "../../assets/images/donate/recycle.jpg";
+
 import SampleImaage from "../../assets/images/sample_image.jpg";
 
 function Donate() {
