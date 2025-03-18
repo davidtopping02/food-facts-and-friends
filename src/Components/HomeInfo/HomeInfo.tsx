@@ -1,35 +1,31 @@
-// Object imports
 import React from "react";
-import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap"; // Import Button from react-bootstrap
-
-// Type imports
+import { Container, Row, Col, Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import StyledButton from "../Button/StyledButton";
 import { CardData } from "../../Types/CardData";
 
-// Props interface
-interface HomeInfoProps {
-  cardData: CardData[];
-}
+const HomeInfo: React.FC<{ cardData: CardData[] }> = ({ cardData }) => {
+  const navigate = useNavigate();
 
-const HomeInfo: React.FC<HomeInfoProps> = ({ cardData }) => {
   return (
-    <div className="row justify-content-center">
-      {cardData.map((card, index) => (
-        <div key={index} className="col-lg-4 col-md-6 col-sm-12 mb-4">
-          <div className="card w-100 h-100">
-            <div className="card-body d-flex flex-column">
-              <h3 className="heading heading-2 text-center">{card.title}</h3>
-              <p className="card-text text-center flex-grow-1">{card.text}</p>
-              <div className="mt-auto text-center">
-                <Link to={card.link}>
-                  <Button className="btn-custom">{card.buttonText}</Button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
+    <Container>
+      <Row className="justify-content-center">
+        {cardData.map(({ title, text, link, buttonText }, index) => (
+          <Col key={index} lg={4} md={6} sm={12} className="mb-4">
+            <Card className="h-100 text-center d-flex flex-column">
+              <Card.Body className="d-flex flex-column">
+                <Card.Title>{title}</Card.Title>
+                <Card.Text className="flex-grow-1">{text}</Card.Text>
+                <StyledButton
+                  text={buttonText}
+                  onClick={() => navigate(link)}
+                />
+              </Card.Body>
+            </Card>
+          </Col>
+        ))}
+      </Row>
+    </Container>
   );
 };
 

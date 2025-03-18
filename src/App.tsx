@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
 
-// pages
+// Pages
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Donate from "./Pages/Donate/Donate";
@@ -9,41 +10,48 @@ import Supporters from "./Pages/Supporters/Supporters";
 import OpeningHours from "./Pages/OpeningHours/About";
 import NewsLetter from "./Pages/NewsLetter/About";
 
-// components
-import Navbar from "./Components/Navbar/Navbar";
-
-// css
-import "./App.css";
-
+// Components
 import Header from "./Components/Header/Header";
+import Navbar from "./Components/Navbar/Navbar";
+import Footer from "./Components/Footer/Footer";
+
+import "./App.css";
 
 function App() {
   return (
-    <div id="appContainer" className="container">
-      <Router>
-        <div className="row pt-4">
-          <div className="col">
-            <Header />
-          </div>
-        </div>
+    <>
+      <Container id="appContainer">
+        <Router>
+          <Row className="pt-4">
+            <Col>
+              <Header />
+            </Col>
+          </Row>
 
-        <div className="row">
-          <div className="col">
-            <Navbar />
-          </div>
-        </div>
+          <Row>
+            <Col>
+              <Navbar />
+            </Col>
+          </Row>
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/donate" element={<Donate />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/supporters" element={<Supporters />} />
-          <Route path="/news-letter" element={<NewsLetter />} />
-          <Route path="/opening-hours" element={<OpeningHours />} />
-        </Routes>
-      </Router>
-    </div>
+          <Row>
+            <Col>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/donate" element={<Donate />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/supporters" element={<Supporters />} />
+                <Route path="/news-letter" element={<NewsLetter />} />
+                <Route path="/opening-hours" element={<OpeningHours />} />
+              </Routes>
+            </Col>
+          </Row>
+        </Router>
+      </Container>
+
+      <Footer />
+    </>
   );
 }
 

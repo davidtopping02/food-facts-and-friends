@@ -2,6 +2,7 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import DonateBanner from "../../assets/images/banners/donate_banner.jpg";
 import Banner from "../../Components/Banner/Banner";
+import StyledButton from "../../Components/Button/StyledButton";
 
 // import MoneyImage from "../../assets/images/donate/money.jpg";
 // import TimeImage from "../../assets/images/donate/time.jpg";
@@ -58,7 +59,7 @@ function Donate() {
                   <Card.Title>{option.title}</Card.Title>
                   <Card.Text>{option.description}</Card.Text>
                   <Link to={option.link}>
-                    <Button className="btn-custom">Learn More</Button>
+                    <StyledButton text="Learn More" />
                   </Link>
                 </Card.Body>
               </Card>
