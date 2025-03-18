@@ -14,7 +14,7 @@ const HomeInfo: React.FC<{ cardData: CardData[] }> = ({ cardData }) => {
           <Col key={index} lg={4} md={6} sm={12} className="mb-4">
             <Card className="h-100 text-center d-flex flex-column">
               <Card.Body className="d-flex flex-column">
-                <Card.Title>{title}</Card.Title>
+                <Card.Title className="heading heading-3">{title}</Card.Title>
                 <Card.Text className="flex-grow-1">{text}</Card.Text>
                 <StyledButton
                   text={buttonText}
