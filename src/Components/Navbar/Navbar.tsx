@@ -20,16 +20,23 @@ const CustomNavbar: React.FC = () => {
         <Navbar.Toggle aria-controls="navbar-nav" />
         <Navbar.Collapse id="navbar-nav">
           <Nav className="mx-auto nav-links">
-            {navLinks.map(({ path, label }) => (
-              <Nav.Link
-                as={Link}
-                to={path}
-                key={path}
-                className={location.pathname === path ? "fw-bold" : ""}
-              >
-                {label}
-              </Nav.Link>
-            ))}
+            {navLinks.map(({ path, label }) => {
+              const isActive =
+                path === "/"
+                  ? location.pathname === path
+                  : location.pathname.startsWith(path);
+
+              return (
+                <Nav.Link
+                  as={Link}
+                  to={path}
+                  key={path}
+                  className={isActive ? "fw-bold" : ""}
+                >
+                  {label}
+                </Nav.Link>
+              );
+            })}
           </Nav>
         </Navbar.Collapse>
       </Container>

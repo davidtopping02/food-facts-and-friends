@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import StyledButton from "../Button/StyledButton";
+import StyledButton from "../StyledButton/StyledButton";
 import { CardData } from "../../Types/CardData";
 
 const HomeInfo: React.FC<{ cardData: CardData[] }> = ({ cardData }) => {

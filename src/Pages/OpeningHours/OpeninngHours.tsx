@@ -1,6 +1,6 @@
 import { Container } from "react-bootstrap";
 
-function OpeningHours() {
+function OpeninngHours() {
   return (
     <Container className="mt-5 text-center">
       <h1 className="fw-bold">Opening Hours Page</h1>
@@ -9,4 +9,4 @@ function OpeningHours() {
   );
 }
 
-export default OpeningHours;
+export default OpeninngHours;
