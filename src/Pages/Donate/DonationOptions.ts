@@ -19,9 +19,9 @@ export interface DonationOption {
       iconClass: "bi-clock",
     },
     {
-      title: "Donate Food Items",
-      link: "/donate/food",
-      description: "Help us by donating non-perishable food items.",
+      title: "Donate Items",
+      link: "/donate/items",
+      description: "Help us by donating non-perishable items.",
       iconClass: "bi-basket",
     },
     {

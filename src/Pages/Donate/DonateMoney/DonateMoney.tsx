@@ -55,14 +55,20 @@ const DonateMoney: React.FC = () => {
                   <StyledButton
                     text="FFF Donation Form"
                     onClick={() =>
-                      window.open("/path-to-fff-donation-form.pdf")
+                      window.open(
+                        "https://www.foodfactsfriends.org.uk/gallery/FFF%20Donatio%20Form.pdf"
+                      )
                     }
                   />
                 </Col>
                 <Col xs="auto">
                   <StyledButton
                     text="Gift Aid Declaration"
-                    onClick={() => window.open("/path-to-gift-aid-form.pdf")}
+                    onClick={() =>
+                      window.open(
+                        "https://www.foodfactsfriends.org.uk/gallery/Charity%20Gift%20Aid%20Declaration.pdf"
+                      )
+                    }
                   />
                 </Col>
               </Row>
