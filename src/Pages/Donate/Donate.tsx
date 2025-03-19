@@ -2,49 +2,17 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import DonateBanner from "../../assets/images/banners/donate_banner.jpg";
 import Banner from "../../Components/Banner/Banner";
-import StyledButton from "../../Components/Button/StyledButton";
-
-// import MoneyImage from "../../assets/images/donate/money.jpg";
-// import TimeImage from "../../assets/images/donate/time.jpg";
-// import FoodImage from "../../assets/images/donate/food.jpg";
-// import RecycleImage from "../../assets/images/donate/recycle.jpg";
-
-import SampleImaage from "../../assets/images/sample_image.jpg";
+import StyledButton from "../../Components/StyledButton/StyledButton";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import { donationOptions } from "./DonationOptions";
 
 function Donate() {
-  const donationOptions = [
-    {
-      title: "Donate Money",
-      image: SampleImaage,
-      link: "/donate/money",
-      description: "Contribute financially to support our mission.",
-    },
-    {
-      title: "Donate Time",
-      image: SampleImaage,
-      link: "/donate/time",
-      description: "Volunteer your time and make a difference.",
-    },
-    {
-      title: "Donate Food Items",
-      image: SampleImaage,
-      link: "/donate/food",
-      description: "Help us by donating non-perishable food items.",
-    },
-    {
-      title: "Donate Recycle Items",
-      image: SampleImaage,
-      link: "/donate/recycle",
-      description: "Donate recyclable items and help the environment.",
-    },
-  ];
-
   return (
     <>
       <Banner
         imageSrc={DonateBanner}
         altText="Supporters Banner"
-        title="How to Donate"
+        title="How You Can Help"
       />
       <Container className="my-5">
         <Row>
@@ -54,8 +22,19 @@ function Donate() {
               md={3}
               className="d-flex justify-content-center mb-4"
             >
-              <Card className="text-center h-100" style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={option.image} alt={option.title} />
+              <Card
+                className="text-center h-100 position-relative"
+                style={{ width: "18rem" }}
+              >
+                <div
+                  className="position-relative d-flex justify-content-center align-items-center"
+                  style={{ height: "150px" }}
+                >
+                  <i
+                    className={`bi ${option.iconClass} text-dark`}
+                    style={{ fontSize: "6rem", opacity: 0.8 }}
+                  ></i>
+                </div>
                 <Card.Body className="d-flex flex-column align-items-center">
                   <Card.Title>{option.title}</Card.Title>
                   <Card.Text>{option.description}</Card.Text>
