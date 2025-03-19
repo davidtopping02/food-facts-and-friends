@@ -13,7 +13,7 @@ import NewsLetter from "./Pages/NewsLetter/NewsLetter";
 import Donate from "./Pages/Donate/Donate";
 import DonateMoney from "./Pages/Donate/DonateMoney/DonateMoney";
 import DonateTime from "./Pages/Donate/DonateTime/DonateTime";
-import DonateFood from "./Pages/Donate/DonateFood/DonateFood";
+import DonateItems from "./Pages/Donate/DonateItems/DonateItems";
 import DonateRecycle from "./Pages/Donate/DonateRecyclables/DonateRecyclables";
 
 // Components
@@ -53,7 +53,7 @@ function App() {
               <Route path="/donate" element={<Donate />} />
               <Route path="/donate/money" element={<DonateMoney />} />
               <Route path="/donate/time" element={<DonateTime />} />
-              <Route path="/donate/food" element={<DonateFood />} />
+              <Route path="/donate/items" element={<DonateItems />} />
               <Route path="/donate/recycle" element={<DonateRecycle />} />
             </Routes>
           </Col>
