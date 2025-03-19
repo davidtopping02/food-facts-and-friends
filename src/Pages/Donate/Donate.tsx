@@ -39,7 +39,7 @@ function Donate() {
                   <Card.Title>{option.title}</Card.Title>
                   <Card.Text>{option.description}</Card.Text>
                   <Link to={option.link}>
-                    <StyledButton text="Learn More" />
+                    <StyledButton size="sm" text="Learn More" />
                   </Link>
                 </Card.Body>
               </Card>
