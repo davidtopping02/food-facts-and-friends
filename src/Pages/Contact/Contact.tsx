@@ -18,14 +18,12 @@ function Contact() {
       </animated.div>
       <div className="container">
         <div className="row align-items-stretch">
-          {/* First Column */}
           <div className="col-md-6">
             <animated.div style={fadeIn}>
               <ContactForm />
             </animated.div>
           </div>
 
-          {/* Second Column */}
           <div className="col-m-6 col">
             <animated.div style={fadeIn}>
               <ContactInfo />

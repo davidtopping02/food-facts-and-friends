@@ -1,5 +1,5 @@
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
+import StyledButton from "../../Components/StyledButton/StyledButton";
 
 export const ContactForm = () => (
   <div className="container-fluid pt-1 pb-1">
@@ -20,7 +20,7 @@ export const ContactForm = () => (
             <Form.Label>Message</Form.Label>
             <Form.Control as="textarea" rows={3} />
           </Form.Group>
-          <Button>Submit</Button>
+          <StyledButton size="sm" text="Submit" />
         </Form>
       </div>
     </div>
