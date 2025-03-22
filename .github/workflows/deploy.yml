@@ -35,20 +35,20 @@ jobs:
       - name: Copy .htaccess to Build Directory
         run: cp .htaccess ./dist/
 
-      - name: Deploy to FTP (Pre-Prod)
+      - name: Deploy to Pre Prod
         if: github.ref == 'refs/heads/pre-prod'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          username: ${{ secrets.PRE_PROD_FTP_USER }}
+          password: ${{ secrets.PRE_PROD_FTP_PASS }}
           local-dir: ./dist/
 
-      - name: Deploy to FTP (Main)
+      - name: Deploy to Prod
         if: github.ref == 'refs/heads/main'
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
+          username: ${{ secrets.PROD_FTP_USER }}
+          password: ${{ secrets.PROD_FTP_PASS }}
           local-dir: ./dist/

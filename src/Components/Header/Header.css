@@ -1,17 +1,17 @@
 .logo {
-    max-width: 200px;
-    width: 100%;
-    height: auto;
+  max-width: 200px;
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 600px) {
-    .logo {
-        max-width: 150px; /* Reduce max size for smaller screens */
-    }
+  .logo {
+    max-width: 150px;
+  }
 }
 
 @media (max-width: 400px) {
-    .logo {
-        max-width: 120px;
-    }
+  .logo {
+    max-width: 120px;
+  }
 }

@@ -1,5 +1,5 @@
 export const communityMessageText =
-  "Food Facts and Friends Community Hub is here to help anyone who is facing hunger because of crisis, be that parents skipping meals to feed their children, using any money to pay the rent, or anyone forced with the choice ‘heat eat’ We are a Community Hub, supported by local businesses and individuals, working to prevent poverty and hunger across Midlothian.";
+  "Food Facts and Friends is a community hub providing affordable food, essential services, and a welcoming space to tackle food insecurity, isolation, and hardship within Midlothian.";
 
 export const homeInfoCardText = [
     {
@@ -15,9 +15,9 @@ export const homeInfoCardText = [
       buttonText: "View Hours",
     },
     {
-      title: "Our Latest News",
-      text: "Stay updated with our latest events, community stories, and important announcements.",
-      link: "/news-letter", 
-      buttonText: "Read News",
+      title: "Get in Touch",  
+      text: "Have questions or want to reach out? Contact us for more information.",
+      link: "/contact", 
+      buttonText: "Contact Us",
     },
   ];

@@ -1,39 +1,43 @@
-import { useSpring, animated } from "react-spring";
-
-import { ContactForm } from "./ContactForm";
-import { ContactInfo } from "./ContactInfo";
+import { Container, Row, Col } from "react-bootstrap";
+import CardItem from "../../Components/CardItem/CardItem";
+import Banner from "../../Components/Banner/Banner";
+import contactBanner from "../../assets/images/banners/contact_banner.jpg";
+import { contactInfoCardText } from "./ContactText";
 
 function Contact() {
-  const fadeIn = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-    delay: 300,
-    config: { duration: 800 },
-  });
-
   return (
-    <div className="mt-5">
-      <animated.div className="row mb-5" style={fadeIn}>
-        <h2 className="heading page-title">Contact Page</h2>
-      </animated.div>
-      <div className="container">
-        <div className="row align-items-stretch">
-          {/* First Column */}
-          <div className="col-md-6">
-            <animated.div style={fadeIn}>
-              <ContactForm />
-            </animated.div>
-          </div>
+    <Container>
+      <Banner imageSrc={contactBanner} altText="" title="Contact Us" />
+      <Row className="justify-content-center align-items-center">
+        <Col md={6}>
+          <CardItem
+            title={contactInfoCardText.name}
+            subtitle={contactInfoCardText.role}
+            description={
+              <>
+                <div>
+                  <i
+                    className="bi bi-envelope"
+                    style={{ marginRight: "10px" }}
+                  ></i>
+                  <a href={`mailto:${contactInfoCardText.email}`}>
+                    {contactInfoCardText.email}
+                  </a>
+                </div>
 
-          {/* Second Column */}
-          <div className="col-m-6 col">
-            <animated.div style={fadeIn}>
-              <ContactInfo />
-            </animated.div>
-          </div>
-        </div>
-      </div>
-    </div>
+                <div>
+                  <i
+                    className="bi bi-telephone"
+                    style={{ marginRight: "10px" }}
+                  ></i>
+                  {contactInfoCardText.primaryPhone}
+                </div>
+              </>
+            }
+          />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

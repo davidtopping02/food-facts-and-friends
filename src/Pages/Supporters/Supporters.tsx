@@ -1,4 +1,4 @@
-import SupportersGallery from "../../Components/SupportersGallery/SupportersGallery";
+import SupportersGallery from "../../Components/ImageGallery/ImageGallery";
 import supportersBanner from "../../assets/images/banners/supporters_banner.jpg";
 import Banner from "../../Components/Banner/Banner";
 

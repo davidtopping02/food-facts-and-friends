@@ -1,71 +1,17 @@
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import DonateBanner from "../../assets/images/banners/donate_banner.jpg";
 import Banner from "../../Components/Banner/Banner";
-
-// import MoneyImage from "../../assets/images/donate/money.jpg";
-// import TimeImage from "../../assets/images/donate/time.jpg";
-// import FoodImage from "../../assets/images/donate/food.jpg";
-// import RecycleImage from "../../assets/images/donate/recycle.jpg";
-import SampleImaage from "../../assets/images/sample_image.jpg";
+import DonateBanner from "../../assets/images/banners/donate_banner.jpg";
+import IconCardGrid from "../../Components/IconCardGrid/IconCardGrid";
+import { donationOptions } from "./DonationOptions";
 
 function Donate() {
-  const donationOptions = [
-    {
-      title: "Donate Money",
-      image: SampleImaage,
-      link: "/donate/money",
-      description: "Contribute financially to support our mission.",
-    },
-    {
-      title: "Donate Time",
-      image: SampleImaage,
-      link: "/donate/time",
-      description: "Volunteer your time and make a difference.",
-    },
-    {
-      title: "Donate Food Items",
-      image: SampleImaage,
-      link: "/donate/food",
-      description: "Help us by donating non-perishable food items.",
-    },
-    {
-      title: "Donate Recycle Items",
-      image: SampleImaage,
-      link: "/donate/recycle",
-      description: "Donate recyclable items and help the environment.",
-    },
-  ];
-
   return (
     <>
       <Banner
         imageSrc={DonateBanner}
         altText="Supporters Banner"
-        title="How to Donate"
+        title="How You Can Help"
       />
-      <Container className="my-5">
-        <Row>
-          {donationOptions.map((option, idx) => (
-            <Col
-              key={idx}
-              md={3}
-              className="d-flex justify-content-center mb-4"
-            >
-              <Card className="text-center h-100" style={{ width: "18rem" }}>
-                <Card.Img variant="top" src={option.image} alt={option.title} />
-                <Card.Body className="d-flex flex-column align-items-center">
-                  <Card.Title>{option.title}</Card.Title>
-                  <Card.Text>{option.description}</Card.Text>
-                  <Link to={option.link}>
-                    <Button className="btn-custom">Learn More</Button>
-                  </Link>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+      <IconCardGrid donationOptions={donationOptions} />
     </>
   );
 }

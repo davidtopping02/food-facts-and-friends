@@ -54,17 +54,16 @@ const OurLocation: React.FC<OurLocationProps> = ({
         rel="noopener noreferrer"
         className="location-link"
       >
-        Open in Google Maps
+        <LoadScript googleMapsApiKey={googleMapsApiKey} libraries={["marker"]}>
+          <GoogleMap
+            mapContainerClassName="map-container"
+            center={center}
+            zoom={zoom}
+            onLoad={onLoad}
+            options={{ mapId }}
+          />
+        </LoadScript>
       </a>
-      <LoadScript googleMapsApiKey={googleMapsApiKey} libraries={["marker"]}>
-        <GoogleMap
-          mapContainerClassName="map-container"
-          center={center}
-          zoom={zoom}
-          onLoad={onLoad}
-          options={{ mapId }}
-        />
-      </LoadScript>
     </div>
   );
 };
