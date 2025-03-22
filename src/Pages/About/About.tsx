@@ -13,11 +13,11 @@ function About() {
           {AboutText.services.map((service, index) => (
             <Col md={6} lg={3} key={index} className="mb-4">
               <Card className="h-100 shadow border-0">
-                <Card.Body>
+                <Card.Body className="d-flex flex-column justify-content-between">
                   <Card.Title className="heading heading-3">
                     {service.title}
                   </Card.Title>
-                  <Card.Text className="text-muted">
+                  <Card.Text className="text-muted d-flex flex-grow-1 justify-content-center">
                     {service.description}
                   </Card.Text>
                 </Card.Body>

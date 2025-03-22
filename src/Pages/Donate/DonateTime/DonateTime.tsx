@@ -11,7 +11,7 @@ const DonateTime: React.FC = () => (
         <Card className="shadow-lg p-4">
           <Card.Body>
             <Card.Title className="text-center">
-              <h2>Donate Time</h2>
+              <h2 className="heading heading-2">Donate Time</h2>
             </Card.Title>
             <Card.Text className="text-center">
               Volunteering your time helps us make a real difference. Your

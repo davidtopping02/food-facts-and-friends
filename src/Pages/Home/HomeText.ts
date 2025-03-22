@@ -15,9 +15,9 @@ export const homeInfoCardText = [
       buttonText: "View Hours",
     },
     {
-      title: "Our Latest News",
-      text: "Stay updated with our latest events, community stories, and important announcements.",
-      link: "/news-letter", 
-      buttonText: "Read News",
+      title: "Get in Touch",  
+      text: "Have questions or want to reach out? Contact us for more information.",
+      link: "/contact", 
+      buttonText: "Contact Us",
     },
   ];

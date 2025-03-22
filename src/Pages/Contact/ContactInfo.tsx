@@ -24,7 +24,7 @@ export const ContactInfo = () => {
               <Col xs={2}>
                 <TelephoneFill />
               </Col>
-              <Col xs={10}>{contactInfoCardText.secondaryPhone}</Col>
+              <Col xs={10}>{contactInfoCardText.primaryPhone}</Col>
             </Row>
           </div>
         </Card.Body>

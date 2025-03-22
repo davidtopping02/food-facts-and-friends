@@ -11,7 +11,7 @@ const DonateMoney: React.FC = () => (
         <Card className="shadow-lg p-4">
           <Card.Body>
             <Card.Title className="text-center">
-              <h2>Financial Donation</h2>
+              <h2 className="heading heading-2">Financial Donation</h2>
             </Card.Title>
             <Card.Text className="text-center">
               We rely on voluntary income to keep our Community Hub operating.

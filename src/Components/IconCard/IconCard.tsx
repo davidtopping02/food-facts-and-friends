@@ -26,7 +26,7 @@ const InfoCard: React.FC<InfoCardProps> = (props) => {
         ></i>
       </div>
       <Card.Body className="d-flex flex-column align-items-center">
-        <Card.Title>{title}</Card.Title>
+        <Card.Title className="heading heading-3">{title}</Card.Title>
         <Card.Text>{description}</Card.Text>
         <Link to={link}>
           <StyledButton size="sm" text="Learn More" />

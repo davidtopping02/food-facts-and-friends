@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Quattrocento:wght@400;700&display=swap");
 
 :root {
   --primary-color: #044924;
   --primary-color-lighter: #085f31;
-  --secondary-color: #555;
+  --secondary-color: #474747;
   --link-color: #408572;
   --link-hover-color: #03582b;
   --btn-bg: #4da38c;
@@ -24,11 +24,9 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-.heading {
-  color: var(--primary-color-lighter);
-}
-
-.heading-1, .page-title {
+/* Headings */
+.heading-1,
+.page-title {
   font-family: "Bungee", cursive;
   font-size: var(--font-size-h1);
   text-align: center;
@@ -36,26 +34,44 @@ body {
 }
 
 .page-title {
+  font-family: "Oswald", sans-serif;
+  color: var(--secondary-color);
+}
+
+.heading-2 {
+  font-family: "Oswald", sans-serif;
+  font-size: var(--font-size-h2);
+  color: var(--secondary-color);
+}
+
+.heading-3,
+.heading-4,
+.heading-5,
+.heading-6 {
+  font-family: "Oswald", sans-serif;
   color: var(--primary-color-lighter);
-  font-family: "Pacifico", cursive;
-
 }
 
-.heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
-  font-family: "Pacifico", cursive;
+.heading-3 {
+  font-size: var(--font-size-h3);
+}
+.heading-4 {
+  font-size: var(--font-size-h4);
+}
+.heading-5 {
+  font-size: var(--font-size-h5);
+}
+.heading-6 {
+  font-size: var(--font-size-h6);
 }
 
-.heading-2 { font-size: var(--font-size-h2); }
-.heading-3 { font-size: var(--font-size-h3); }
-.heading-4 { font-size: var(--font-size-h4); }
-.heading-5 { font-size: var(--font-size-h5); }
-.heading-6 { font-size: var(--font-size-h6); }
-
+/* Paragraphs */
 p {
   color: var(--secondary-color);
   font-size: var(--font-size-p);
 }
 
+/* Links */
 a {
   color: var(--link-color);
   text-decoration: none;
@@ -65,4 +81,3 @@ a {
 a:hover {
   color: var(--link-hover-color);
 }
-
