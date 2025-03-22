@@ -2,7 +2,13 @@ import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import StyledButton from "../StyledButton/StyledButton";
-import { CardData } from "../../Types/CardData";
+
+export interface CardData {
+  title: string;
+  text: string;
+  link: string;
+  buttonText: string;
+}
 
 const HomeInfo: React.FC<{ cardData: CardData[] }> = ({ cardData }) => {
   const navigate = useNavigate();
