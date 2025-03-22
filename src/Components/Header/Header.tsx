@@ -14,7 +14,7 @@ const Header: React.FC = () => {
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <img src={logo} alt="Logo" className="logo me-3" />
-          <h1 className="heading heading-1 mb-0">Food Facts and Friends</h1>
+          <h1 className="heading heading-1 mb-0">Food Facts Friends</h1>
         </Link>
       </div>
     </div>
