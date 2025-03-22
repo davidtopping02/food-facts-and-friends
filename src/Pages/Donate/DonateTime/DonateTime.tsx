@@ -45,7 +45,7 @@ const DonateTime: React.FC = () => {
                       <Card.Text className="flex-grow-1">
                         Alternatively, you can call us at: <br />
                         <strong>
-                          <a href="tel:+447507697109">07507 697109</a>
+                          <a href="tel:+447507697109">01968 675417</a>
                         </strong>
                       </Card.Text>
                     </Card.Body>

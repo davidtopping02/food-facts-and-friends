@@ -1,35 +1,34 @@
 import { Envelope, TelephoneFill } from "react-bootstrap-icons";
+import { Card, Container, Row, Col } from "react-bootstrap";
 import { contactInfoCardText } from "./ContactText";
 
 export const ContactInfo = () => {
   return (
-    <div className="container-fluid pt-1 pb-1 ">
-      <div className="card">
-        <div className="card-body text-center">
-          <h3 className="heading heading-3">{contactInfoCardText.name}</h3>
-          <h4 className="heading heading-4">{contactInfoCardText.role}</h4>
+    <Container fluid className="pt-1 pb-1">
+      <Card>
+        <Card.Body className="text-center">
+          <Card.Title as="h3" className="heading heading-3">
+            {contactInfoCardText.name}
+          </Card.Title>
+          <Card.Subtitle as="h4" className="heading heading-4">
+            {contactInfoCardText.role}
+          </Card.Subtitle>
           <div className="pt-4 pb-4">
-            <div className="row ">
-              <div className="col-2">
+            <Row className="align-items-center">
+              <Col xs={2}>
                 <Envelope />
-              </div>
-              <div className="col-10">{contactInfoCardText.email}</div>
-            </div>
-            <div className="row ">
-              <div className="col-2">
+              </Col>
+              <Col xs={10}>{contactInfoCardText.email}</Col>
+            </Row>
+            <Row className="align-items-center">
+              <Col xs={2}>
                 <TelephoneFill />
-              </div>
-              <div className="col-10">{contactInfoCardText.primaryPhone}</div>
-            </div>
-            <div className="row ">
-              <div className="col-2">
-                <TelephoneFill />
-              </div>
-              <div className="col-10">{contactInfoCardText.secondaryPhone}</div>
-            </div>
+              </Col>
+              <Col xs={10}>{contactInfoCardText.secondaryPhone}</Col>
+            </Row>
           </div>
-        </div>
-      </div>
-    </div>
+        </Card.Body>
+      </Card>
+    </Container>
   );
 };

@@ -1,5 +1,5 @@
 export const communityMessageText =
-  "The Food Facts and Friends Community Hub supports anyone facing hunger due to crisis—whether parents skipping meals to feed their children, using all their money to pay rent, or choosing between heating and eating. Supported by local businesses and individuals, we work to prevent poverty and hunger across Midlothian.";
+  "Food Facts Friends is a community hub providing affordable food, essential services, and a welcoming space to tackle food insecurity, isolation, and hardship within Midlothian.";
 
 export const homeInfoCardText = [
     {
