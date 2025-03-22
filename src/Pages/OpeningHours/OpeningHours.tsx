@@ -1,7 +1,5 @@
-import { Container, Row, Col, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
 import Banner from "../../Components/Banner/Banner";
-import StyledButton from "../../Components/StyledButton/StyledButton";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 function OpeningHours() {
