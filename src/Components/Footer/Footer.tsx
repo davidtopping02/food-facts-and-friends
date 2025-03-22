@@ -11,15 +11,7 @@ const Footer: React.FC = () => (
             &copy; {new Date().getFullYear()} Food Facts and Friends. All rights
             reserved.
           </p>
-          <p>
-            <a href="/privacy" className="footer-link">
-              Privacy Policy
-            </a>{" "}
-            |{" "}
-            <a href="/terms" className="footer-link">
-              Terms of Service
-            </a>
-          </p>
+          <p>Scottish Charity No SC047203</p>
         </Col>
       </Row>
     </Container>

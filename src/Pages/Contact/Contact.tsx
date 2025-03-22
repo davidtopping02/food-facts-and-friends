@@ -1,5 +1,5 @@
 import { useSpring, animated } from "react-spring";
-
+import { Container, Row, Col } from "react-bootstrap";
 import { ContactForm } from "./ContactForm";
 import { ContactInfo } from "./ContactInfo";
 
@@ -12,28 +12,25 @@ function Contact() {
   });
 
   return (
-    <div className="mt-5">
-      <animated.div className="row mb-5" style={fadeIn}>
+    <Container className="mt-5">
+      <animated.div className="mb-5" style={fadeIn}>
         <h2 className="heading page-title">Contact Page</h2>
       </animated.div>
-      <div className="container">
-        <div className="row align-items-stretch">
-          {/* First Column */}
-          <div className="col-md-6">
-            <animated.div style={fadeIn}>
-              <ContactForm />
-            </animated.div>
-          </div>
-
-          {/* Second Column */}
-          <div className="col-m-6 col">
-            <animated.div style={fadeIn}>
-              <ContactInfo />
-            </animated.div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <Row className="align-items-stretch">
+        {/* First Column */}
+        <Col md={6}>
+          <animated.div style={fadeIn}>
+            <ContactForm />
+          </animated.div>
+        </Col>
+        {/* Second Column */}
+        <Col md={6}>
+          <animated.div style={fadeIn}>
+            <ContactInfo />
+          </animated.div>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
