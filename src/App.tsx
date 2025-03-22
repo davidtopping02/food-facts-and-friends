@@ -6,7 +6,7 @@ import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import Supporters from "./Pages/Supporters/Supporters";
-import OpeningHours from "./Pages/OpeningHours/OpeninngHours";
+import OpeningHours from "./Pages/OpeningHours/OpeningHours";
 import NewsLetter from "./Pages/NewsLetter/NewsLetter";
 
 // Donate Pages

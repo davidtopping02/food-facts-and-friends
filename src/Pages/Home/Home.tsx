@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import HomeInfo from "../../Components/HomeInfo/HomeInfo";
 import OurLocation from "../../Components/OurLocation/OurLocation";
-import CommunityHubMessage from "../../Components/CommunityHubMessage/CommunityHubMessage";
+import CommunityHubMessage from "../../Components/InfoMessage/InfoMessage";
 import Banner from "../../Components/Banner/Banner";
 
 import homeBanner from "../../assets/images/banners/home_banner.jpg";

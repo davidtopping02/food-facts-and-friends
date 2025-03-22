@@ -1,5 +1,5 @@
 import { Container, Row, Col, Image } from "react-bootstrap";
-import "./SupportersGallery.css";
+import "./ImageGallery.css";
 import useFadeIn from "../../hooks/useFadeInOnScroll";
 
 interface SupportersGalleryProps {
