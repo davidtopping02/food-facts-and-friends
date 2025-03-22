@@ -26,7 +26,6 @@ const DonateTime: React.FC = () => (
               ))}
             </Row>
 
-            <h5 className="mt-4 text-center">Learn More:</h5>
             <Row className="mt-3 justify-content-center">
               <Col xs="auto" className="mb-3 mb-md-0">
                 <StyledButton
@@ -37,7 +36,7 @@ const DonateTime: React.FC = () => (
               <Col xs="auto">
                 <StyledButton
                   text="Contact Us"
-                  onClick={() => (window.location.href = "/contact-us")}
+                  onClick={() => (window.location.href = "/contact")}
                 />
               </Col>
             </Row>

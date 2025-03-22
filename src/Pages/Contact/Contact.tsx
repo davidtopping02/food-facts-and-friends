@@ -2,15 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import CardItem from "../../Components/CardItem/CardItem"; // Import CardItem
 import Banner from "../../Components/Banner/Banner";
 import contactBanner from "../../assets/images/banners/contact_banner.jpg";
-
-// Contact info data
-export const contactInfoCardText = {
-  name: "Mark Wells",
-  role: "Project Manager",
-  email: "foodfactsfriends@gmail.com",
-  primaryPhone: "07507 697 109",
-  secondaryPhone: "01968 675417",
-};
+import { contactInfoCardText } from "./ContactText";
 
 function Contact() {
   return (

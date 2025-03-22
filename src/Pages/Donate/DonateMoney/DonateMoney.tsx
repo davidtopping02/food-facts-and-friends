@@ -26,7 +26,6 @@ const DonateMoney: React.FC = () => (
               ))}
             </Row>
 
-            <h5 className="mt-4 text-center">Download Forms:</h5>
             <Row className="mt-3 justify-content-center">
               <Col xs="auto" className="mb-3 mb-md-0">
                 <StyledButton
