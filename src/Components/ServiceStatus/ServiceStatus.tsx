@@ -47,7 +47,7 @@ const ServiceStatus: React.FC<ServiceStatusProps> = ({ hours }) => {
       className={`badge ${openStatus ? "bg-success" : "bg-danger"} p-2`}
       style={{ color: "white", fontSize: "1rem" }}
     >
-      {openStatus ? "Open" : "Closed"}
+      {openStatus ? "Currently Open" : "Currently Closed"}
     </div>
   );
 };

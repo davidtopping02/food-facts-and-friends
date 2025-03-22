@@ -1,5 +1,5 @@
 export const communityMessageText =
-  "Food Facts Friends is a community hub providing affordable food, essential services, and a welcoming space to tackle food insecurity, isolation, and hardship within Midlothian.";
+  "Food Facts and Friends is a community hub providing affordable food, essential services, and a welcoming space to tackle food insecurity, isolation, and hardship within Midlothian.";
 
 export const homeInfoCardText = [
     {

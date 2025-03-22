@@ -25,7 +25,7 @@ export interface DonationOption {
       iconClass: "bi-basket",
     },
     {
-      title: "Donate Recycle Items",
+      title: "Donate Recyclable Items",
       link: "/donate/recycle",
       description: "Donate recyclable items and help the environment.",
       iconClass: "bi-recycle",
