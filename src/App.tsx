@@ -1,4 +1,11 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
 import { Container, Row, Col } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -24,9 +31,30 @@ import Footer from "./Components/Footer/Footer";
 
 import "./App.css";
 
+const googleAnalyticsId = import.meta.env.VITE_GOOGLE_ANALYTICS_TRACKING_ID;
+
+function Analytics() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: location.pathname,
+      title: document.title,
+    });
+  }, [location]);
+
+  return null;
+}
+
 function App() {
+  useEffect(() => {
+    ReactGA.initialize(googleAnalyticsId);
+  }, []);
+
   return (
     <Router>
+      <Analytics />
       <Container id="appContainer">
         <Row className="pt-4">
           <Col>
@@ -60,7 +88,6 @@ function App() {
           </Col>
         </Row>
       </Container>
-
       <Footer />
     </Router>
   );
