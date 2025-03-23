@@ -3,6 +3,7 @@ import {
   Routes,
   Route,
   useLocation,
+  Navigate,
 } from "react-router-dom";
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
@@ -71,12 +72,13 @@ function App() {
         <Row>
           <Col>
             <Routes>
-              <Route path="/" element={<Home />} />
+              <Route path="/*" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/supporters" element={<Supporters />} />
               <Route path="/news-letter" element={<NewsLetter />} />
               <Route path="/opening-hours" element={<OpeningHours />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
 
               {/* Nested Donate Routes */}
               <Route path="/donate" element={<Donate />} />
