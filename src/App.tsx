@@ -33,15 +33,26 @@ import Footer from "./Components/Footer/Footer";
 import "./App.css";
 
 const googleAnalyticsId = import.meta.env.VITE_GOOGLE_ANALYTICS_TRACKING_ID;
+ReactGA.initialize(googleAnalyticsId);
 
 function Analytics() {
   const location = useLocation();
 
   useEffect(() => {
+    const currentPage = location.pathname + location.search;
+
+    // Send pageview event
     ReactGA.send({
       hitType: "pageview",
-      page: location.pathname,
-      title: document.title,
+      page: currentPage,
+      title: document.title || currentPage,
+    });
+
+    // Send navigation event
+    ReactGA.event({
+      category: "Navigation",
+      action: "Page View",
+      label: currentPage,
     });
   }, [location]);
 
@@ -49,10 +60,6 @@ function Analytics() {
 }
 
 function App() {
-  useEffect(() => {
-    ReactGA.initialize(googleAnalyticsId);
-  }, []);
-
   return (
     <Router>
       <Analytics />
