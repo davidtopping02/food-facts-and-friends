@@ -4,6 +4,10 @@ import CardItem from "../../../Components/CardItem/CardItem";
 import StyledButton from "../../../Components/StyledButton/StyledButton";
 import { donationMethods } from "./donationMethods";
 
+// (bad practice will update)
+import FFFDonationForm from "../../../assets/pdfs/donation_form.pdf";
+import GiftAidDeclaration from "../../../assets/pdfs/gift_aid_declaration.pdf";
+
 const DonateMoney: React.FC = () => (
   <Container className="my-5">
     <Row className="justify-content-center">
@@ -30,21 +34,13 @@ const DonateMoney: React.FC = () => (
               <Col xs="auto" className="mb-3 mb-md-0">
                 <StyledButton
                   text="FFF Donation Form"
-                  onClick={() =>
-                    window.open(
-                      "https://www.foodfactsfriends.org.uk/gallery/FFF%20Donatio%20Form.pdf"
-                    )
-                  }
+                  onClick={() => window.open(FFFDonationForm)}
                 />
               </Col>
               <Col xs="auto">
                 <StyledButton
                   text="Gift Aid Declaration"
-                  onClick={() =>
-                    window.open(
-                      "https://www.foodfactsfriends.org.uk/gallery/Charity%20Gift%20Aid%20Declaration.pdf"
-                    )
-                  }
+                  onClick={() => window.open(GiftAidDeclaration)}
                 />
               </Col>
             </Row>
